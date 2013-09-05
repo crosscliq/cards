@@ -12,6 +12,20 @@
 
 /* Swatches */
 /* A
+
+[data-url="/chase"] div ul.alphascroll {
+	display:none!important;
+	background:red;
+}
+
+
+
+[data-url="/wells-fargo"] div ul.alphascroll {
+	display:none!important;
+	background:red;
+}
+
+
 -----------------------------------------------------------------------------------------------------------*/
 h1 {
 	background:url(../img/logo.png) no-repeat;
@@ -22,6 +36,14 @@ h1 {
 	margin:auto!important;
 	padding:0px!important;
 }
+
+@font-face
+{
+font-family: Omnes;
+src: url(Omnes.otf);
+}
+
+body { font-family:Omnes; }
 .ui-bar-a {
 	border: 1px solid #ffffff /*{a-bar-border}*/;
 	background: #ffffff /*{a-bar-background-color}*/;
@@ -56,7 +78,7 @@ h1 {
 .ui-bar-a select,
 .ui-bar-a textarea,
 .ui-bar-a button {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
 .ui-body-a,
 .ui-overlay-a {
@@ -80,7 +102,7 @@ h1 {
 .ui-body-a select,
 .ui-body-a textarea,
 .ui-body-a button {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
 .ui-body-a .ui-link-inherit {
 	color: #53b0d7 /*{a-body-color}*/;
@@ -154,7 +176,7 @@ h1 {
 .ui-btn-up-a,
 .ui-btn-hover-a,
 .ui-btn-down-a {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 	text-decoration: none;
 }
 /* B
@@ -193,7 +215,7 @@ h1 {
 .ui-bar-b select,
 .ui-bar-b textarea,
 .ui-bar-b button {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
 .ui-body-b,
 .ui-overlay-b {
@@ -217,7 +239,7 @@ h1 {
 .ui-body-b select,
 .ui-body-b textarea,
 .ui-body-b button {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
 .ui-body-b .ui-link-inherit {
 	color: #333333 /*{b-body-color}*/;
@@ -291,7 +313,7 @@ h1 {
 .ui-btn-up-b,
 .ui-btn-hover-b,
 .ui-btn-down-b {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 	text-decoration: none;
 }
 
@@ -332,13 +354,13 @@ h1 {
 .ui-bar-c select,
 .ui-bar-c textarea,
 .ui-bar-c button {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
 .ui-body-c,
 .ui-overlay-c {
 	border: 1px solid #aaaaaa /*{c-body-border}*/;
 	color: #333333 /*{c-body-color}*/;
-	text-shadow: 0 /*{c-body-shadow-x}*/ 1px /*{c-body-shadow-y}*/ 0 /*{c-body-shadow-radius}*/ #ffffff /*{c-body-shadow-color}*/;
+	
 	background: #f9f9f9 /*{c-body-background-color}*/;
 	background-image: -webkit-gradient(linear, left top, left bottom, from( #f9f9f9 /*{c-body-background-start}*/), to( #eeeeee /*{c-body-background-end}*/)); /* Saf4+, Chrome */
 	background-image: -webkit-linear-gradient( #f9f9f9 /*{c-body-background-start}*/, #eeeeee /*{c-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
@@ -356,7 +378,7 @@ h1 {
 .ui-body-c select,
 .ui-body-c textarea,
 .ui-body-c button {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
 .ui-body-c .ui-link-inherit {
 	color: #333333 /*{c-body-color}*/;
@@ -430,7 +452,7 @@ h1 {
 .ui-btn-up-c,
 .ui-btn-hover-c,
 .ui-btn-down-c {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 	text-decoration: none;
 }
 
@@ -457,7 +479,7 @@ a.ui-link-inherit {
 	background-image:     -ms-linear-gradient( #5bc1ec /*{global-active-background-start}*/, #3080a1 /*{global-active-background-end}*/); /* IE10 */
 	background-image:      -o-linear-gradient( #5bc1ec /*{global-active-background-start}*/, #3080a1 /*{global-active-background-end}*/); /* Opera 11.10+ */
 	background-image:         linear-gradient( #5bc1ec /*{global-active-background-start}*/, #3080a1 /*{global-active-background-end}*/);
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: Omnes, Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
 .ui-btn-active:visited,
 .ui-btn-active:hover,

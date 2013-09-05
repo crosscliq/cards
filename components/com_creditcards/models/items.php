@@ -20,6 +20,8 @@ class CreditcardsModelItems extends JModelList
          */
         public function __construct($config = array())
         {
+
+		JRequest::setVar('limit',250);
                 if (empty($config['filter_fields']))
                 {
                         $config['filter_fields'] = array(
@@ -135,7 +137,7 @@ class CreditcardsModelItems extends JModelList
                 {
                         $orderCol = 'c.title ' . $orderDirn . ', a.ordering';
                 }
-             
+             	 $orderCol = 'a.title';
                 $query->order($db->escape($orderCol . ' ' . $orderDirn));
                 //echo $query;
                 //echo nl2br(str_replace('#__','jos_',$query));

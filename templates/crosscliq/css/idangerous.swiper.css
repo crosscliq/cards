@@ -27,10 +27,13 @@ Basic Swiper Styles
 	backface-visibility:hidden;
 	/* Fix of Webkit flickering */
 	z-index:1;
+	height:100%;
 }
 .swiper-wrapper {
 	position:relative;
 	width:100%;
+	min-height:200px;
+	height:100%!important;
 	-webkit-transition-property:-webkit-transform, left, top;
 	-webkit-transition-duration:0s;
 	-webkit-transform:translate3d(0px,0,0);
@@ -56,6 +59,7 @@ Basic Swiper Styles
 	transition-duration:0s;
 	transform:translate3d(0px,0,0);
 	transition-timing-function:ease;
+
 }
 .swiper-free-mode > .swiper-wrapper {
 	-webkit-transition-timing-function: ease-out;

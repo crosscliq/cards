@@ -1,7 +1,8 @@
 $(document).ready(function(){
-
+	
   $('div').live('pageshow',function(event, ui){
     			$( '#mylistview' ).listview( 'refresh' ).alphascroll();
+		//	mySwiper.reInit();
   });
 	//Init Navigation
 	var nav = $('.swiper-nav').swiper({

@@ -53,8 +53,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = '/Users/chris/Repos/CrossCliq/creditcards/logs';
-	public $tmp_path = '/Users/chris/Repos/CrossCliq/creditcards/tmp';
+	public $log_path = '/var/www/isis/cards/logs';
+	public $tmp_path = '/var/www/isis/cards/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $MetaRights = '';

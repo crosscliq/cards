@@ -75,7 +75,7 @@ $user = JFactory::getUser();
 	. ($task ? ' task-' . $task : ' no-task')
 	. ($itemid ? ' itemid-' . $itemid : '');
 ?>">
-<div data-role="page" style="background:#62175c!important">
+<div data-role="page" style="background:#ccc!important" data-add-back-btn="true">
 		<jdoc:include type="component" />
 </div>
 
