@@ -27,7 +27,7 @@ class CreditcardsModelItems extends JModelList
                                 'cid', 'a.cid', 'client_name',
                                 'name', 'a.name',
                                 'alias', 'a.alias',
-                                'state', 'a.state',
+                                'state', 'a.published',
                                 'ordering', 'a.ordering',
                                 'language', 'a.language',
                                 'catid', 'a.catid', 'category_title',
@@ -67,7 +67,8 @@ class CreditcardsModelItems extends JModelList
                                 'a.id AS id, a.title AS title, a.file AS file,' .
                                         'a.description AS description,' .
                                         'a.checked_out AS checked_out,' . 
-                                         'a.published AS published,' .       
+                                        'a.published AS published,' . 
+                                        'a.network AS network,' .         
                                         'a.ordering AS ordering, a.catid AS catid,' .
                                         'a.access AS access, a.created_time AS created_time, a.modified_time AS modified_time,' .
                                         'a.modified_time AS modified_time'
@@ -88,7 +89,7 @@ class CreditcardsModelItems extends JModelList
                         ->join('LEFT', '#__categories AS c ON c.id = a.catid');
 
                 // Filter by published state
-                $published = $this->getState('filter.published');
+                $published = $this->getState('filter.state');
                 if (is_numeric($published))
                 {
                         $query->where('a.published = ' . (int) $published);
@@ -169,6 +170,35 @@ class CreditcardsModelItems extends JModelList
                 return parent::publish($pks, $value);
         }
 
+
+        /**
+   * Method to auto-populate the model state.
+   *
+   * Note. Calling getState in this method will result in recursion.
+   *
+   * @since   1.6
+   */
+  protected function populateState($ordering = null, $direction = null)
+  {
+    // Load the filter state.
+    $search = $this->getUserStateFromRequest($this->context . '.filter.search', 'filter_search');
+    $this->setState('filter.search', $search);
+
+    $state = $this->getUserStateFromRequest($this->context . '.filter.state', 'filter_state', '', 'string');
+    $this->setState('filter.state', $state);
+
+
+    $categoryId = $this->getUserStateFromRequest($this->context . '.filter.category_id', 'filter_category_id', '');
+    $this->setState('filter.category_id', $categoryId);
+
+  
+    // Load the parameters.
+    $params = JComponentHelper::getParams('com_creditcards');
+    $this->setState('params', $params);
+
+    // List state information.
+    parent::populateState('a.title', 'asc');
+  }
 
      
 

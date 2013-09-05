@@ -30,6 +30,8 @@ if ($saveOrder)
 	JHtml::_('sortablelist.sortable', 'itemsList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
 }
 $sortFields = $this->getSortFields();
+
+
 ?>
 <script type="text/javascript">
 	Joomla.orderTable = function()
@@ -103,12 +105,14 @@ $sortFields = $this->getSortFields();
 					<th>
 						<?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder); ?>
 					</th>
-					
+					<th>
+						<?php echo JHtml::_('grid.sort', 'Network', 'a.network', $listDirn, $listOrder); ?>
+					</th>
 					<th>
 						<?php echo JHtml::_('grid.sort', 'Ordering', 'a.ordering', $listDirn, $listOrder); ?>
 					</th>
 					<th>
-						<?php echo JHtml::_('grid.sort', 'category', 'a.catid', $listDirn, $listOrder); ?>
+						<?php echo JHtml::_('grid.sort', 'Category', 'a.catid', $listDirn, $listOrder); ?>
 					</th>
 			
 					<th width="1%" class="nowrap hidden-phone">
@@ -172,6 +176,10 @@ $sortFields = $this->getSortFields();
 								<?php echo $this->escape($item->title); ?>
 							<?php endif; ?>
 							
+						</td>
+						<td class="center hidden-phone">
+						
+								<?php echo $item->network; ?></span>
 						</td>
 							<td class="center hidden-phone">
 						

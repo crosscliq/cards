@@ -52,14 +52,16 @@ $params = $params->toArray();
 							<?php echo $this->form->getLabel('catid'); ?> <?php echo $this->form->getInput('catid'); ?>
 						</div>
 						<div class="control-group form-inline">
-							<?php echo $this->form->getLabel('accepted'); ?><?php echo $this->form->getInput('accepted'); ?>
+							<?php echo $this->form->getLabel('network'); ?> <?php echo $this->form->getInput('network'); ?>
 						</div>
 						<div class="control-group form-inline">
-							<?php // echo $this->form->getLabel('link'); ?><?php echo $this->form->getInput('link'); ?>
+							<?php echo $this->form->getLabel('accepted'); ?><?php echo $this->form->getInput('accepted'); ?>
 						</div>
-						<?php // echo $this->form->getInput('description'); ?>
+					
+						<div class="control-group form-inline">
 						<?php echo $this->form->getLabel('published'); ?>
 						<?php echo $this->form->getInput('published'); ?>
+						</div>
 					</fieldset>
 						
 				<?php echo JHtml::_('bootstrap.endTab'); ?>

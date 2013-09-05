@@ -92,7 +92,7 @@ class CreditcardsViewItems extends JViewLegacy
             {
                 if ($this->state->get('filter.state') != 2)
                 {
-                    JToolbarHelper::archiveList('items.archive');
+                //    JToolbarHelper::archiveList('items.archive');
                 }
                 elseif ($this->state->get('filter.state') == 2)
                 {
@@ -119,9 +119,9 @@ class CreditcardsViewItems extends JViewLegacy
 
         if ($canDo->get('core.admin'))
         {
-            JToolbarHelper::preferences('com_creditcards');
+          //  JToolbarHelper::preferences('com_creditcards');
         }
-        JToolbarHelper::help('JHELP_COMPONENTS_CREDITCARDS_ITEMS');
+        //JToolbarHelper::help('JHELP_COMPONENTS_CREDITCARDS_ITEMS');
 
         JHtmlSidebar::setAction('index.php?option=com_creditcards&view=items');
 

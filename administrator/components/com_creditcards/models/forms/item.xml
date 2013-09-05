@@ -48,7 +48,7 @@
 		<field
 		name="published"
 		type="list"
-		class="span12 small"
+		class=" small"
 		label="JSTATUS"
 		description="JFIELD_PUBLISHED_DESC"
 		default="1"
@@ -61,11 +61,26 @@
 	</field>
 
 	<field
+		name="network"
+		type="list"
+		class=" small"
+		label="Network"
+		description="JFIELD_PUBLISHED_DESC"
+		default="1"
+		size="1"
+	>
+		<option value="visa">Visa</option>
+		<option value="amex">AMEX</option>
+		<option value="discover">Discover</option>
+		<option value="mastercard">Master Card</option>
+	</field>
+
+	<field
 		name="accepted"
 		type="list"
-		class="span12 small"
-		label="JSTATUS"
-		description="JFIELD_PUBLISHED_DESC"
+		class=" small"
+		label="Isis Accepted Status"
+		description=""
 		default="1"
 		size="1"
 	>
@@ -79,7 +94,7 @@
 		type="accesslevel"
 		label="JFIELD_ACCESS_LABEL"
 		description="JFIELD_ACCESS_DESC"
-		class="span12 small"
+		class=" small"
 	/>
 
 

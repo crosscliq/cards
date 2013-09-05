@@ -143,6 +143,21 @@ class CreditcardsModelItem extends JModelAdmin
 			}
 		}
 
+
+		if(empty($result->network)){
+			if($result->catid == 8) {
+				$result->network = 'amex'; 
+			}
+			if($result->catid == 10) {
+				$result->network = 'visa'; 
+			}
+			if($result->catid == 11) {
+				$result->network = 'visa'; 
+			}
+
+		}
+
+
 		return $result;
 	}
 
