@@ -10,7 +10,7 @@
 	<fields name="request">
 		<fieldset name="request"
 		 >
-			<field name="id" type="category"
+			<field name="category_id" type="category"
 				description="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_DESC"
 				extension="com_creditcards"
 				label="JGLOBAL_FIELD_CATEGORIES_CHOOSE_CATEGORY_LABEL"

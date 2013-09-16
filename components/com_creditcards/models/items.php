@@ -30,7 +30,8 @@ class CreditcardsModelItems extends JModelList
                                 'name', 'a.name',
                                 'alias', 'a.alias',
                                 'state', 'a.state',
-                                'ordering', 'a.ordering',
+                                'network', 'a.network',
+				 'ordering', 'a.ordering',
                                 'language', 'a.language',
                                 'catid', 'a.catid', 'category_title',
                                 'checked_out', 'a.checked_out',
@@ -48,7 +49,34 @@ class CreditcardsModelItems extends JModelList
                 parent::__construct($config);
         }
 
+	    /**
+   * Method to auto-populate the model state.
+   *
+   * Note. Calling getState in this method will result in recursion.
+   *
+   * @since   1.6
+   */
+  protected function populateState($ordering = null, $direction = null)
+  {
+    // Load the filter state.
+    $search = $this->getUserStateFromRequest($this->context . '.filter.search', 'filter_search');
+    $this->setState('filter.search', $search);
 
+    $state = $this->getUserStateFromRequest($this->context . '.filter.state', 'filter_state', '1', 'string');
+    $this->setState('filter.state', $state);
+
+
+    $categoryId = $this->getUserStateFromRequest($this->context . '.filter.category_id', 'category_id', '');
+    $this->setState('filter.category_id', $categoryId);
+var_dump( $categoryId);	
+  
+    // Load the parameters.
+    $params = JComponentHelper::getParams('com_creditcards');
+    $this->setState('params', $params);
+
+    // List state information.
+    parent::populateState('a.title', 'asc');
+  }
         
 
         /**
@@ -71,7 +99,7 @@ class CreditcardsModelItems extends JModelList
                                         'a.checked_out AS checked_out,' . 
                                          'a.published AS published,' .    
                                            'a.link AS link,' .
-                                        'a.accepted AS accepted,' .   
+					'a.network AS network,' .	                                        'a.accepted AS accepted,' .   
                                         'a.ordering AS ordering, a.catid AS catid,' .
                                         'a.access AS access, a.created_time AS created_time, a.modified_time AS modified_time,' .
                                         'a.modified_time AS modified_time'
@@ -92,7 +120,7 @@ class CreditcardsModelItems extends JModelList
                         ->join('LEFT', '#__categories AS c ON c.id = a.catid');
 
                 // Filter by published state
-                $published = $this->getState('filter.published');
+                $published = $this->getState('filter.state');
                 if (is_numeric($published))
                 {
                         $query->where('a.published = ' . (int) $published);
@@ -139,7 +167,7 @@ class CreditcardsModelItems extends JModelList
                 }
              	 $orderCol = 'a.title';
                 $query->order($db->escape($orderCol . ' ' . $orderDirn));
-                //echo $query;
+                echo $query;
                 //echo nl2br(str_replace('#__','jos_',$query));
                 return $query;
         }

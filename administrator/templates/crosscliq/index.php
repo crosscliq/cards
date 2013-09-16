@@ -231,16 +231,6 @@ $stickyToolbar = $this->params->get('stickyToolbar', '1');
 	</div>
 	<?php if (($statusFixed) && ($this->countModules('status'))) : ?>
 	<!-- Begin Status Module -->
-	<div id="status" class="navbar navbar-fixed-bottom hidden-phone">
-		<div class="btn-toolbar">
-			<div class="btn-group pull-right">
-				<p><jdoc:include type="modules" name="footer" style="no" />
-				&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
-
-			</div>
-			<jdoc:include type="modules" name="status" style="no" />
-		</div>
-	</div>
 	<!-- End Status Module -->
 	<?php endif; ?>
 	<jdoc:include type="modules" name="debug" style="none" />

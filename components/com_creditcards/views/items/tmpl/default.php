@@ -30,7 +30,7 @@ if ($item->category_title !=="American Express") { $card="visa"; } else { $card=
 	<div class="ui-btn-text">
  		<h3><?php echo  $item->title ; ?></h3>
 	</div>
- <img src="templates/crosscliq/img/<?=$card?>.png" alt="<?=$card?>" class="ui-li-thumb">
+ <img src="templates/crosscliq/img/<?=$item->network?>.png" alt="<?=$item->network?>" class="ui-li-thumb">
 </li>
 <?php endforeach; ?>
 		</ul>
