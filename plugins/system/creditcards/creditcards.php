@@ -27,7 +27,7 @@ class PlgSystemCreditcards extends JPlugin
 	 *
 	 * @since   3.0
 	 */
-	public function onAfterRoute()
+	/*public function onAfterRoute()
 	{	
 
 		
@@ -61,7 +61,7 @@ class PlgSystemCreditcards extends JPlugin
 		
 
 
-	}	
+	}	*/
 
 
 }

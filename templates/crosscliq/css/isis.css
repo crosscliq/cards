@@ -43,6 +43,7 @@ font-family: Omnes;
 src: url(Omnes.otf);
 }
 
+
 body { font-family:Omnes; }
 .ui-bar-a {
 	border: 1px solid #ffffff /*{a-bar-border}*/;
@@ -823,4 +824,9 @@ a.ui-link-inherit {
 .ui-mobile-nosupport-boxshadow .ui-link-inherit:focus {
 	outline-width: 1px;
 	outline-style: auto;
+
+
+	
 }
+
+

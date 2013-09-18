@@ -53,8 +53,6 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/simple-app.css');
 $doc->addScript('templates/' .$this->template. '/js/jquery-1.8.3.min.js');
 $doc->addScript('templates/' .$this->template. '/js/jquery.mobile-1.2.0.min.js');
 $doc->addScript('templates/' .$this->template. '/js/jquery.mobile.alphascroll.js');
-$doc->addScript('templates/' .$this->template. '/js/idangerous.swiper-2.0.min.js');
-$doc->addScript('templates/' .$this->template. '/js/idangerous.swiper.scrollbar-2.0.js');
 $doc->addScript('templates/' .$this->template. '/js/simple-app.js');
 // Add current user information
 $user = JFactory::getUser();

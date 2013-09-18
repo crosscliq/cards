@@ -68,7 +68,7 @@ class CreditcardsModelItems extends JModelList
 
     $categoryId = $this->getUserStateFromRequest($this->context . '.filter.category_id', 'category_id', '');
     $this->setState('filter.category_id', $categoryId);
-var_dump( $categoryId);	
+
   
     // Load the parameters.
     $params = JComponentHelper::getParams('com_creditcards');
@@ -167,7 +167,7 @@ var_dump( $categoryId);
                 }
              	 $orderCol = 'a.title';
                 $query->order($db->escape($orderCol . ' ' . $orderDirn));
-                echo $query;
+             
                 //echo nl2br(str_replace('#__','jos_',$query));
                 return $query;
         }
