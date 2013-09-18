@@ -45,6 +45,12 @@ class CreditcardsHelper
 				JText::sprintf('COM_CATEGORIES_CATEGORIES_TITLE', JText::_('com_creditcards')),
 				'creditcards-categories');
 		}
+		JHtmlSidebar::addEntry(
+			JText::_('COM_CREDITCARDS_SUBMENU_REQUESTS'),
+			'index.php?option=com_creditcards&view=requests',
+			$vName == 'requests'
+		);
+
 
 	}
 
