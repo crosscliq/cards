@@ -3,7 +3,7 @@
 				<div data-role="header" data-position="fixed">
 				<a href="no.php" data-rel="back" data-icon="back" data-theme="b">Back</a>
 					<h1>Isis</h1>
-				<a href="no.php" data-icon="check" data-theme="b">&nbsp;</a>
+				
 							  <div class="ui-bar">
 							   <h2><b><?=$this->items[0]->category_title;?></b></h2>
 							  </div>
@@ -25,7 +25,7 @@
 																$url = 'yes.html';
 															} 
 															else {
-																$url = 'no.php';
+																$url =  JURI::current().'/no/';
 																$url .= '?cardid='.$item->id;
 																$url .= '&cardname='.$item->title;
 																$url .= '&network='.$item->network;

@@ -34,6 +34,16 @@ else
 	$fullWidth = 0;
 }
 
+
+$logo = $this->params->get('logoFile');
+
+$templateColor = $this->params->get('templateColor');
+$templateBackgroundColor = $this->params->get('templateBackgroundColor');
+
+
+$cssfile = $this->params->get('cssfile');
+
+
 // Add JavaScript Frameworks
 //JHtml::_('bootstrap.framework');
 
@@ -42,7 +52,7 @@ else
 $doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
 
 
-
+$doc->addStyleSheet('templates/'.$this->template.'/css/jquery.mobile-1.2.0.min.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/jquery.mobile-1.2.0.min.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/jquery.mobile.alphascroll.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/isis.css');
@@ -54,6 +64,11 @@ $doc->addScript('templates/' .$this->template. '/js/jquery-1.8.3.min.js');
 $doc->addScript('templates/' .$this->template. '/js/jquery.mobile-1.2.0.min.js');
 $doc->addScript('templates/' .$this->template. '/js/jquery.mobile.alphascroll.js');
 $doc->addScript('templates/' .$this->template. '/js/simple-app.js');
+
+
+
+$doc->addStyleSheet('templates/'.$this->template.'/css/'. $cssfile);
+
 // Add current user information
 $user = JFactory::getUser();
 
@@ -65,6 +80,9 @@ $user = JFactory::getUser();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1">
 	<jdoc:include type="head" />
+
+
+
 
  </head>
 <body class="site <?php echo $option

@@ -43,7 +43,31 @@
 		<position>footer</position>
 	</positions>
 	<config>
-		
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="templateColor" class="" type="color" default="#08C"
+					label="Template Color"
+					description="base Color" />
+				<field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
+					label="Background Color"
+					description="" />
+				<field name="logoFile" class="" type="media" default=""
+					label="Logo"
+					description=" base Logo" />
+				<field name="cssfile"  type="text" default=""
+					label="css file Name"
+					description=""
+					filter="string" />
+				<field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+				<field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+			</fieldset>
+		</fields>
 
 	</config>
 </extension>

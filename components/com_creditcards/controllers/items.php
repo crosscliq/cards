@@ -18,9 +18,9 @@ class CreditcardsControllerItems extends CreditcardsController
          *
          * @return void
          */
-      public   function display($cachable = false, $urlparams = false) 
+        public   function display($cachable = false, $urlparams = false) 
         {       
-                die('OMG');
+           
                 // set default view if not set
                 $input = JFactory::getApplication()->input;
                 $input->set('view', $input->getCmd('view', 'items'));

@@ -31,7 +31,7 @@ class CreditcardsModelItems extends JModelList
                                 'alias', 'a.alias',
                                 'state', 'a.state',
                                 'network', 'a.network',
-				 'ordering', 'a.ordering',
+				                'ordering', 'a.ordering',
                                 'language', 'a.language',
                                 'catid', 'a.catid', 'category_title',
                                 'checked_out', 'a.checked_out',
@@ -90,6 +90,7 @@ class CreditcardsModelItems extends JModelList
                 $db = $this->getDbo();
                 $query = $db->getQuery(true);
 
+                
                 // Select the required fields from the table.
                 $query->select(
                         $this->getState(
@@ -99,7 +100,11 @@ class CreditcardsModelItems extends JModelList
                                         'a.checked_out AS checked_out,' . 
                                          'a.published AS published,' .    
                                            'a.link AS link,' .
-					'a.network AS network,' .	                                        'a.accepted AS accepted,' .   
+                                            'a.att AS att,' .
+                                             'a.verizon AS verizon,' .
+                                              'a.tmobile AS tmobile,' .
+
+					                   'a.network AS network,' .	                                        'a.accepted AS accepted,' .   
                                         'a.ordering AS ordering, a.catid AS catid,' .
                                         'a.access AS access, a.created_time AS created_time, a.modified_time AS modified_time,' .
                                         'a.modified_time AS modified_time'

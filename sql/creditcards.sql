@@ -35,7 +35,7 @@ CREATE TABLE `cio8v_assets` (
   UNIQUE KEY `idx_asset_name` (`name`),
   KEY `idx_lft_rgt` (`lft`,`rgt`),
   KEY `idx_parent_id` (`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +100,7 @@ CREATE TABLE `cio8v_associations` (
   `key` char(32) NOT NULL COMMENT 'The key for the association computed from an md5 on associated ids.',
   PRIMARY KEY (`context`,`id`),
   KEY `idx_key` (`key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -137,7 +137,7 @@ CREATE TABLE `cio8v_banner_clients` (
   PRIMARY KEY (`id`),
   KEY `idx_own_prefix` (`own_prefix`),
   KEY `idx_metakey_prefix` (`metakey_prefix`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -165,7 +165,7 @@ CREATE TABLE `cio8v_banner_tracks` (
   KEY `idx_track_date` (`track_date`),
   KEY `idx_track_type` (`track_type`),
   KEY `idx_banner_id` (`banner_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,7 +225,7 @@ CREATE TABLE `cio8v_banners` (
   KEY `idx_metakey_prefix` (`metakey_prefix`),
   KEY `idx_banner_catid` (`catid`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -280,7 +280,7 @@ CREATE TABLE `cio8v_categories` (
   KEY `idx_left_right` (`lft`,`rgt`),
   KEY `idx_alias` (`alias`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -299,7 +299,7 @@ INSERT INTO `cio8v_categories` VALUES (7,32,1,11,12,1,'uncategorised','com_users
 INSERT INTO `cio8v_categories` VALUES (8,38,1,13,14,1,'amex','com_creditcards','American Express','amex','','',1,144,'2013-09-05 18:21:54',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/amex.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:25:50',144,'2013-08-06 18:32:48',0,'*',1);
 INSERT INTO `cio8v_categories` VALUES (9,39,1,15,16,1,'boa','com_creditcards','Bank of America','boa','','',0,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/bankofamerica.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:25:58',144,'2013-08-06 18:33:11',0,'*',1);
 INSERT INTO `cio8v_categories` VALUES (10,40,1,17,18,1,'chase','com_creditcards','Chase','chase','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/chase.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:26:14',144,'2013-08-06 18:33:34',0,'*',1);
-INSERT INTO `cio8v_categories` VALUES (11,41,1,19,20,1,'wells-fargo','com_creditcards','Wells Fargo','wells-fargo','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/wellsfargo.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:34:41',0,'0000-00-00 00:00:00',0,'*',1);
+INSERT INTO `cio8v_categories` VALUES (11,41,1,19,20,1,'wells-fargo','com_creditcards','Wells Fargo','wells-fargo','','',0,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/wellsfargo.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:34:41',0,'0000-00-00 00:00:00',0,'*',1);
 /*!40000 ALTER TABLE `cio8v_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -363,7 +363,7 @@ CREATE TABLE `cio8v_contact_details` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -422,7 +422,7 @@ CREATE TABLE `cio8v_content` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -445,7 +445,7 @@ CREATE TABLE `cio8v_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`content_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -470,7 +470,7 @@ CREATE TABLE `cio8v_content_rating` (
   `rating_count` int(10) unsigned NOT NULL DEFAULT '0',
   `lastip` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`content_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -499,7 +499,7 @@ CREATE TABLE `cio8v_content_types` (
   `router` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`type_id`),
   KEY `idx_alias` (`type_alias`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -541,7 +541,7 @@ CREATE TABLE `cio8v_contentitem_tag_map` (
   KEY `idx_tag` (`tag_id`),
   KEY `idx_type` (`type_id`),
   KEY `idx_core_content_id` (`core_content_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Maps items from content tables to tags';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Maps items from content tables to tags';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -563,7 +563,7 @@ DROP TABLE IF EXISTS `cio8v_core_log_searches`;
 CREATE TABLE `cio8v_core_log_searches` (
   `search_term` varchar(128) NOT NULL DEFAULT '',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -598,8 +598,11 @@ CREATE TABLE `cio8v_creditcards_items` (
   `catid` int(11) NOT NULL,
   `accepted` int(11) NOT NULL,
   `network` text NOT NULL,
+  `att` tinyint(4) NOT NULL DEFAULT '1',
+  `verizon` tinyint(4) NOT NULL DEFAULT '1',
+  `tmobile` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=152 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=152 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -608,149 +611,149 @@ CREATE TABLE `cio8v_creditcards_items` (
 
 LOCK TABLES `cio8v_creditcards_items` WRITE;
 /*!40000 ALTER TABLE `cio8v_creditcards_items` DISABLE KEYS */;
-INSERT INTO `cio8v_creditcards_items` VALUES (9,'American Express® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (10,'American Express® Golf Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (11,'AMEX Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (12,'AMEX Community Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (13,'AMEX Costco Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (14,'AMP Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (15,'Blue Cash','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (16,'Blue Cash Everyday(SM)','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (17,'Blue Cash for Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (18,'Blue Cash InStore','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (19,'Blue Cash Preferred(SM)','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (20,'Blue for Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (21,'Blue for Students®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (22,'Blue from American Express','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (23,'Blue Sky','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (24,'Blue Sky Preferred','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (25,'Business Capital Line','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (26,'Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (27,'Business Cash Rebate Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (28,'Business Centurion® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (29,'Business Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (30,'Business Gold Rewards Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (31,'Business Green Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (32,'Business Green Rewards Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (33,'Business Line of Credit','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (34,'Business Management Account','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (35,'Business Membership Rewards','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (36,'Business Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (37,'Business Purchase Account','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (38,'Cash Rebate Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (39,'Centurion® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (40,'Clear from American Express®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (41,'Company Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (42,'Costco Cash Rebate Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (43,'Costco TrueEarnings Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (44,'Delta Reserve','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (45,'Delta Reserve for Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (46,'Delta SkyMiles®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (47,'Delta SkyMiles® Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (48,'Delta SkyMiles® Options','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (49,'Executive Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (50,'Fidelity Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (51,'Fidelity Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (52,'Fidelity Platinum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (53,'FreedomPass Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (54,'Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (55,'Gold Delta SkyMiles®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (56,'Gold Delta SkyMiles® Busn','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (57,'Gold Optima® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (58,'Gold Senior Member Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (59,'Goldman Sachs','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (60,'Green Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (61,'Hilton HHonors Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (62,'Hilton HHonors Surpass®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (63,'IMA Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (64,'IN:BOSTON Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (65,'IN:CHICAGO Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (66,'IN:DC Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (67,'IN:LA Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (68,'IN:MIAMI Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (69,'IN:NYC Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (70,'IN:PHILADELPHIA Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (71,'IN:SANFRANCISCO Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (72,'JetBlue Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (73,'JetBlue Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (74,'Lowe\'s Business Rewards Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (75,'Membership Rewards® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (76,'Mercedes-Benz Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (77,'Mercedes-Benz Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (78,'Morgan Stanley Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (79,'Morgan Stanley Platinum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (80,'National MS Society Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (81,'NY Knicks Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (82,'NY Rangers Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (83,'One from American Express®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (84,'Optima® Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (85,'Optima® Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (86,'Plat Busn Premium Cash Reb','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (87,'Platinum Busn Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (88,'Platinum Busn Line of Credit','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (89,'Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (90,'Platinum Cash Rebate Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (91,'Platinum Delta SkyMiles Busn','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (92,'Platinum Delta SkyMiles®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (93,'Plum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (94,'Premier Rewards Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (95,'Rewards Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (96,'Rewards Plus Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (97,'Senior Member Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (98,'SimplyCash(SM) Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (99,'SkyPoints Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (100,'SkyPoints Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (101,'Small Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (102,'Starwood Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (103,'Starwood Preferred Guest','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (104,'Student Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (105,'Student Green Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (106,'The Business Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (107,'The Knot Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (108,'The Nest Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (109,'Traditional Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (110,'Traditional Green Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (111,'TrueEarnings Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (112,'ZYNC® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (113,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,0,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (114,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,0,'amex');
-INSERT INTO `cio8v_creditcards_items` VALUES (115,'Alaska Airlines®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (116,'Asiana Airlines®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (117,'Bank of America® Accelerated Rewards® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (118,'BankAmericard®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (119,'BankAmericard® Better Balance Rewards™','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (120,'BankAmericard Cash Rewards™','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (121,'BankAmericard Cash Rewards™ for Students','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (122,'BankAmericard® for Students','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (123,'BankAmericard® Power Rewards®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (124,'BankAmericard Privileges® with Cash Rewards','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (125,'BankAmericard Secured®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (126,'BankAmericard Travel Rewards®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (127,'BankAmericard Travel Rewards® for Students','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (128,'Bass Pro Shops® Outdoor Rewards®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (129,'MLB®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (130,'Norwegian Cruise Line®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (131,'Royal Caribbean®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (132,'Spirit Airlines™','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (133,'Susan G. Komen®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (134,'Virgin Atlantic®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (135,'World Wildlife Fund','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (136,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,0,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (137,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,0,'');
-INSERT INTO `cio8v_creditcards_items` VALUES (138,'Slate','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (139,'Freedom','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (140,'Sapphire','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (141,'Palladium','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (142,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,0,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (143,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,0,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (144,'Wells Fargo Rewards® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (145,'Wells Fargo Cash BackSM Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (146,'Wells Fargo Home Rebate Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (147,'Wells Fargo® Platinum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (148,'Wells Fargo Cash BackSM College Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (149,'Wells Fargo Secured Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (150,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,0,'visa');
-INSERT INTO `cio8v_creditcards_items` VALUES (151,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,0,'visa');
+INSERT INTO `cio8v_creditcards_items` VALUES (9,'American Express® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,0,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (10,'American Express® Golf Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (11,'AMEX Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (12,'AMEX Community Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (13,'AMEX Costco Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (14,'AMP Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (15,'Blue Cash','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (16,'Blue Cash Everyday(SM)','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (17,'Blue Cash for Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (18,'Blue Cash InStore','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (19,'Blue Cash Preferred(SM)','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (20,'Blue for Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (21,'Blue for Students®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (22,'Blue from American Express','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (23,'Blue Sky','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (24,'Blue Sky Preferred','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (25,'Business Capital Line','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (26,'Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (27,'Business Cash Rebate Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (28,'Business Centurion® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (29,'Business Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (30,'Business Gold Rewards Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (31,'Business Green Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (32,'Business Green Rewards Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (33,'Business Line of Credit','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (34,'Business Management Account','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (35,'Business Membership Rewards','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (36,'Business Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (37,'Business Purchase Account','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (38,'Cash Rebate Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (39,'Centurion® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (40,'Clear from American Express®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (41,'Company Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (42,'Costco Cash Rebate Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (43,'Costco TrueEarnings Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (44,'Delta Reserve','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (45,'Delta Reserve for Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (46,'Delta SkyMiles®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (47,'Delta SkyMiles® Business','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (48,'Delta SkyMiles® Options','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (49,'Executive Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (50,'Fidelity Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (51,'Fidelity Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (52,'Fidelity Platinum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (53,'FreedomPass Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (54,'Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (55,'Gold Delta SkyMiles®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (56,'Gold Delta SkyMiles® Busn','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (57,'Gold Optima® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (58,'Gold Senior Member Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (59,'Goldman Sachs','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (60,'Green Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (61,'Hilton HHonors Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (62,'Hilton HHonors Surpass®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (63,'IMA Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (64,'IN:BOSTON Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (65,'IN:CHICAGO Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (66,'IN:DC Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (67,'IN:LA Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (68,'IN:MIAMI Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (69,'IN:NYC Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (70,'IN:PHILADELPHIA Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (71,'IN:SANFRANCISCO Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (72,'JetBlue Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (73,'JetBlue Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (74,'Lowe\'s Business Rewards Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (75,'Membership Rewards® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (76,'Mercedes-Benz Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (77,'Mercedes-Benz Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (78,'Morgan Stanley Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (79,'Morgan Stanley Platinum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (80,'National MS Society Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (81,'NY Knicks Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (82,'NY Rangers Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (83,'One from American Express®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (84,'Optima® Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (85,'Optima® Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (86,'Plat Busn Premium Cash Reb','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (87,'Platinum Busn Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (88,'Platinum Busn Line of Credit','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (89,'Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (90,'Platinum Cash Rebate Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (91,'Platinum Delta SkyMiles Busn','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (92,'Platinum Delta SkyMiles®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (93,'Plum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (94,'Premier Rewards Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (95,'Rewards Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (96,'Rewards Plus Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (97,'Senior Member Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (98,'SimplyCash(SM) Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (99,'SkyPoints Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (100,'SkyPoints Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (101,'Small Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (102,'Starwood Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (103,'Starwood Preferred Guest','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (104,'Student Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (105,'Student Green Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (106,'The Business Platinum Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (107,'The Knot Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (108,'The Nest Credit Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (109,'Traditional Gold Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (110,'Traditional Green Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (111,'TrueEarnings Business Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (112,'ZYNC® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (113,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,0,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (114,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',8,0,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (115,'Alaska Airlines®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (116,'Asiana Airlines®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (117,'Bank of America® Accelerated Rewards® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (118,'BankAmericard®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (119,'BankAmericard® Better Balance Rewards™','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (120,'BankAmericard Cash Rewards™','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (121,'BankAmericard Cash Rewards™ for Students','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (122,'BankAmericard® for Students','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (123,'BankAmericard® Power Rewards®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (124,'BankAmericard Privileges® with Cash Rewards','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (125,'BankAmericard Secured®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (126,'BankAmericard Travel Rewards®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (127,'BankAmericard Travel Rewards® for Students','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (128,'Bass Pro Shops® Outdoor Rewards®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (129,'MLB®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (130,'Norwegian Cruise Line®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (131,'Royal Caribbean®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (132,'Spirit Airlines™','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (133,'Susan G. Komen®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (134,'Virgin Atlantic®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (135,'World Wildlife Fund','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (136,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,0,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (137,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,0,'',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (138,'Slate','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (139,'Freedom','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (140,'Sapphire','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (141,'Palladium','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (142,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,0,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (143,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,0,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (144,'Wells Fargo Rewards® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (145,'Wells Fargo Cash BackSM Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (146,'Wells Fargo Home Rebate Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (147,'Wells Fargo® Platinum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (148,'Wells Fargo Cash BackSM College Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (149,'Wells Fargo Secured Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (150,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,0,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (151,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,0,'visa',1,1,1);
 /*!40000 ALTER TABLE `cio8v_creditcards_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -763,19 +766,17 @@ DROP TABLE IF EXISTS `cio8v_creditcards_requests`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cio8v_creditcards_requests` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `file` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL,
-  `ordering` int(11) NOT NULL,
-  `published` int(11) NOT NULL,
+  `card_id` int(255) NOT NULL,
+  `card_name` varchar(255) NOT NULL,
+  `issuing Bank` varchar(255) NOT NULL,
+  `customer_email` varchar(255) NOT NULL,
+  `customer_number` text NOT NULL,
+  `customer_name` varchar(255) NOT NULL,
   `checked_out` int(11) NOT NULL,
   `access` varchar(255) NOT NULL,
   `created_time` datetime NOT NULL,
   `modified_time` datetime NOT NULL,
   `created` datetime NOT NULL,
-  `catid` int(11) NOT NULL,
-  `accepted` int(11) NOT NULL,
   `network` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -819,7 +820,7 @@ CREATE TABLE `cio8v_extensions` (
   KEY `element_clientid` (`element`,`client_id`),
   KEY `element_folder_clientid` (`element`,`folder`,`client_id`),
   KEY `extension` (`type`,`element`,`folder`,`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10006 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10006 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -985,7 +986,7 @@ CREATE TABLE `cio8v_finder_filters` (
   `data` text NOT NULL,
   `params` mediumtext,
   PRIMARY KEY (`filter_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1031,7 +1032,7 @@ CREATE TABLE `cio8v_finder_links` (
   KEY `idx_url` (`url`(75)),
   KEY `idx_published_list` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`list_price`),
   KEY `idx_published_sale` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`sale_price`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1057,7 +1058,7 @@ CREATE TABLE `cio8v_finder_links_terms0` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1083,7 +1084,7 @@ CREATE TABLE `cio8v_finder_links_terms1` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1109,7 +1110,7 @@ CREATE TABLE `cio8v_finder_links_terms2` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1135,7 +1136,7 @@ CREATE TABLE `cio8v_finder_links_terms3` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1161,7 +1162,7 @@ CREATE TABLE `cio8v_finder_links_terms4` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1187,7 +1188,7 @@ CREATE TABLE `cio8v_finder_links_terms5` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1213,7 +1214,7 @@ CREATE TABLE `cio8v_finder_links_terms6` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1239,7 +1240,7 @@ CREATE TABLE `cio8v_finder_links_terms7` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1265,7 +1266,7 @@ CREATE TABLE `cio8v_finder_links_terms8` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1291,7 +1292,7 @@ CREATE TABLE `cio8v_finder_links_terms9` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1317,7 +1318,7 @@ CREATE TABLE `cio8v_finder_links_termsa` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1343,7 +1344,7 @@ CREATE TABLE `cio8v_finder_links_termsb` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1369,7 +1370,7 @@ CREATE TABLE `cio8v_finder_links_termsc` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1395,7 +1396,7 @@ CREATE TABLE `cio8v_finder_links_termsd` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1421,7 +1422,7 @@ CREATE TABLE `cio8v_finder_links_termse` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1447,7 +1448,7 @@ CREATE TABLE `cio8v_finder_links_termsf` (
   PRIMARY KEY (`link_id`,`term_id`),
   KEY `idx_term_weight` (`term_id`,`weight`),
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1479,7 +1480,7 @@ CREATE TABLE `cio8v_finder_taxonomy` (
   KEY `ordering` (`ordering`),
   KEY `access` (`access`),
   KEY `idx_parent_published` (`parent_id`,`state`,`access`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1505,7 +1506,7 @@ CREATE TABLE `cio8v_finder_taxonomy_map` (
   PRIMARY KEY (`link_id`,`node_id`),
   KEY `link_id` (`link_id`),
   KEY `node_id` (`node_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1539,7 +1540,7 @@ CREATE TABLE `cio8v_finder_terms` (
   KEY `idx_term_phrase` (`term`,`phrase`),
   KEY `idx_stem_phrase` (`stem`,`phrase`),
   KEY `idx_soundex_phrase` (`soundex`,`phrase`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1563,7 +1564,7 @@ CREATE TABLE `cio8v_finder_terms_common` (
   `language` varchar(3) NOT NULL,
   KEY `idx_word_lang` (`term`,`language`),
   KEY `idx_lang` (`language`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1707,7 +1708,7 @@ CREATE TABLE `cio8v_finder_tokens` (
   `language` char(3) NOT NULL DEFAULT '',
   KEY `idx_word` (`term`),
   KEY `idx_context` (`context`)
-) ENGINE=MEMORY DEFAULT CHARSET=utf8;
+) ENGINE=MEMORY DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1740,7 +1741,7 @@ CREATE TABLE `cio8v_finder_tokens_aggregate` (
   `language` char(3) NOT NULL DEFAULT '',
   KEY `token` (`term`),
   KEY `keyword_id` (`term_id`)
-) ENGINE=MEMORY DEFAULT CHARSET=utf8;
+) ENGINE=MEMORY DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1765,7 +1766,7 @@ CREATE TABLE `cio8v_finder_types` (
   `mime` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1804,7 +1805,7 @@ CREATE TABLE `cio8v_languages` (
   UNIQUE KEY `idx_langcode` (`lang_code`),
   KEY `idx_access` (`access`),
   KEY `idx_ordering` (`ordering`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1857,7 +1858,7 @@ CREATE TABLE `cio8v_menu` (
   KEY `idx_alias` (`alias`),
   KEY `idx_path` (`path`(255)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1866,7 +1867,7 @@ CREATE TABLE `cio8v_menu` (
 
 LOCK TABLES `cio8v_menu` WRITE;
 /*!40000 ALTER TABLE `cio8v_menu` DISABLE KEYS */;
-INSERT INTO `cio8v_menu` VALUES (1,'','Menu_Item_Root','root','','','','',1,0,0,0,0,'0000-00-00 00:00:00',0,0,'',0,'',0,57,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (1,'','Menu_Item_Root','root','','','','',1,0,0,0,0,'0000-00-00 00:00:00',0,0,'',0,'',0,95,0,'*',0);
 INSERT INTO `cio8v_menu` VALUES (2,'menu','com_banners','Banners','','Banners','index.php?option=com_banners','component',0,1,1,4,0,'0000-00-00 00:00:00',0,0,'class:banners',0,'',1,10,0,'*',1);
 INSERT INTO `cio8v_menu` VALUES (3,'menu','com_banners','Banners','','Banners/Banners','index.php?option=com_banners','component',0,2,2,4,0,'0000-00-00 00:00:00',0,0,'class:banners',0,'',2,3,0,'*',1);
 INSERT INTO `cio8v_menu` VALUES (4,'menu','com_banners_categories','Categories','','Banners/Categories','index.php?option=com_categories&extension=com_banners','component',0,2,2,6,0,'0000-00-00 00:00:00',0,0,'class:banners-cat',0,'',4,5,0,'*',1);
@@ -1891,10 +1892,29 @@ INSERT INTO `cio8v_menu` VALUES (22,'menu','com_joomlaupdate','Joomla! Update','
 INSERT INTO `cio8v_menu` VALUES (23,'main','com_tags','Tags','','Tags','index.php?option=com_tags','component',0,1,1,29,0,'0000-00-00 00:00:00',0,1,'class:tags',0,'',43,44,0,'',1);
 INSERT INTO `cio8v_menu` VALUES (101,'mainmenu','Home','home','','home','index.php?option=com_creditcards&view=items&layout=categories&task=categories&id=0','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":1,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',45,46,1,'*',0);
 INSERT INTO `cio8v_menu` VALUES (105,'main','Creditcards','creditcards','','creditcards','index.php?option=com_creditcards','component',0,1,1,10002,0,'0000-00-00 00:00:00',0,1,'class:component',0,'',47,48,0,'',1);
-INSERT INTO `cio8v_menu` VALUES (106,'mainmenu','American Express','american-express','','american-express','index.php?option=com_creditcards&view=items&id=8&tmpl=component','component',1,1,1,10002,144,'2013-08-08 01:29:15',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',49,50,0,'*',0);
-INSERT INTO `cio8v_menu` VALUES (107,'mainmenu','Bank of America','bank-of-america','','bank-of-america','index.php?option=com_creditcards&view=items&id=9&tmpl=component','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',51,52,0,'*',0);
-INSERT INTO `cio8v_menu` VALUES (108,'mainmenu','Chase','chase','','chase','index.php?option=com_creditcards&view=items&id=10&tmpl=component','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',53,54,0,'*',0);
-INSERT INTO `cio8v_menu` VALUES (109,'mainmenu','Wells Fargo','wells-fargo','','wells-fargo','index.php?option=com_creditcards&view=items&id=11&tmpl=component','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',55,56,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (106,'mainmenu','American Express','american-express','','american-express','index.php?option=com_creditcards&view=items&id=8&tmpl=component&category_id=8','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',49,50,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (107,'mainmenu','Bank of America','bank-of-america','','bank-of-america','index.php?option=com_creditcards&view=items&id=9&tmpl=component&category_id=9','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',51,52,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (108,'mainmenu','Chase','chase','','chase','index.php?option=com_creditcards&view=items&id=10&tmpl=component&category_id=10','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',53,56,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (109,'mainmenu','Wells Fargo','wells-fargo','','wells-fargo','index.php?option=com_creditcards&view=items&id=11&tmpl=component&category_id=11','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',57,58,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (110,'mainmenu','att','att','','att','index.php?option=com_creditcards&view=items&layout=categories&task=categories&id=0','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',59,74,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (111,'mainmenu','American Express','american-express','','att/american-express','index.php?option=com_creditcards&view=items&id=8&tmpl=component&category_id=8&carrier=1','component',1,110,2,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',60,63,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (112,'mainmenu','Bank of America','bank-of-america','','att/bank-of-america','index.php?option=com_creditcards&view=items&id=9&tmpl=component&category_id=9&carrier=1','component',1,110,2,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',64,67,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (113,'mainmenu','Chase','chase','','tmobile/chase','index.php?option=com_creditcards&view=items&id=10&tmpl=component&category_id=10&carrier=3','component',1,116,2,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',90,91,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (114,'mainmenu','Wells Fargo','wells-fargo','','att/wells-fargo','index.php?option=com_creditcards&view=items&id=11&tmpl=component&category_id=11&carrier=1','component',1,110,2,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',68,71,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (115,'mainmenu','Verizon','verizon','','verizon','index.php?option=com_creditcards&view=items&layout=categories&task=categories&id=0','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',75,84,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (116,'mainmenu','T-Mobile','tmobile','','tmobile','index.php?option=com_creditcards&view=items&layout=categories&task=categories&id=0','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',85,94,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (117,'mainmenu','American Express','american-express','','verizon/american-express','index.php?option=com_creditcards&view=items&id=8&tmpl=component&category_id=8&carrier=2','component',1,115,2,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',76,77,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (118,'mainmenu','Bank of America','bank-of-america','','verizon/bank-of-america','index.php?option=com_creditcards&view=items&id=9&tmpl=component&category_id=9&carrier=2','component',1,115,2,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',78,79,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (119,'mainmenu','Chase','chase','','verizon/chase','index.php?option=com_creditcards&view=items&id=10&tmpl=component&category_id=10&carrier=2','component',1,115,2,10002,0,'0000-00-00 00:00:00',0,1,'',11,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',80,81,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (120,'mainmenu','Wells Fargo','wells-fargo','','verizon/wells-fargo','index.php?option=com_creditcards&view=items&id=11&tmpl=component&category_id=11&carrier=2','component',1,115,2,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',82,83,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (121,'mainmenu','American Express','american-express','','tmobile/american-express','index.php?option=com_creditcards&view=items&id=8&tmpl=component&category_id=8&carrier=3','component',1,116,2,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',86,87,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (122,'mainmenu','Bank of America','bank-of-america','','tmobile/bank-of-america','index.php?option=com_creditcards&view=items&id=9&tmpl=component&category_id=9&carrier=3','component',1,116,2,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',88,89,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (123,'mainmenu','Wells Fargo','wells-fargo','','tmobile/wells-fargo','index.php?option=com_creditcards&view=items&id=11&tmpl=component&category_id=11&carrier=3','component',1,116,2,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',92,93,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (124,'mainmenu','Chase','chase','','att/chase','index.php?option=com_creditcards&view=items&id=10&tmpl=component&category_id=10&carrier=1','component',1,110,2,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',72,73,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (125,'mainmenu','no','no','','att/american-express/no','index.php?option=com_creditcards&view=items&layout=no&category_id=8&carrier=1&tmpl=component','component',1,111,3,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',61,62,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (126,'mainmenu','no','no','','att/bank-of-america/no','index.php?option=com_creditcards&view=items&layout=no&category_id=9&carrier=1&tmpl=component','component',1,112,3,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',65,66,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (127,'mainmenu','no','no','','chase/no','index.php?option=com_creditcards&view=items&layout=no&category_id=10&carrier=1&tmpl=component','component',1,108,2,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',54,55,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (128,'mainmenu','no','no','','att/wells-fargo/no','index.php?option=com_creditcards&view=items&layout=no&category_id=11&carrier=1&tmpl=component','component',0,114,3,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',69,70,0,'*',0);
 /*!40000 ALTER TABLE `cio8v_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1912,7 +1932,7 @@ CREATE TABLE `cio8v_menu_types` (
   `description` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_menutype` (`menutype`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1944,7 +1964,7 @@ CREATE TABLE `cio8v_messages` (
   `message` text NOT NULL,
   PRIMARY KEY (`message_id`),
   KEY `useridto_state` (`user_id_to`,`state`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1968,7 +1988,7 @@ CREATE TABLE `cio8v_messages_cfg` (
   `cfg_name` varchar(100) NOT NULL DEFAULT '',
   `cfg_value` varchar(255) NOT NULL DEFAULT '',
   UNIQUE KEY `idx_user_var_name` (`user_id`,`cfg_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2009,7 +2029,7 @@ CREATE TABLE `cio8v_modules` (
   KEY `published` (`published`,`access`),
   KEY `newsfeeds` (`module`,`published`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2047,7 +2067,7 @@ CREATE TABLE `cio8v_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`moduleid`,`menuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2122,7 +2142,7 @@ CREATE TABLE `cio8v_newsfeeds` (
   KEY `idx_createdby` (`created_by`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2147,7 +2167,7 @@ CREATE TABLE `cio8v_overrider` (
   `string` text NOT NULL,
   `file` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2179,7 +2199,7 @@ CREATE TABLE `cio8v_redirect_links` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_link_old` (`old_url`),
   KEY `idx_link_modifed` (`modified_date`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2202,7 +2222,7 @@ CREATE TABLE `cio8v_schemas` (
   `extension_id` int(11) NOT NULL,
   `version_id` varchar(20) NOT NULL,
   PRIMARY KEY (`extension_id`,`version_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2234,7 +2254,7 @@ CREATE TABLE `cio8v_session` (
   PRIMARY KEY (`session_id`),
   KEY `userid` (`userid`),
   KEY `time` (`time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2243,7 +2263,8 @@ CREATE TABLE `cio8v_session` (
 
 LOCK TABLES `cio8v_session` WRITE;
 /*!40000 ALTER TABLE `cio8v_session` DISABLE KEYS */;
-INSERT INTO `cio8v_session` VALUES ('c9475fec5c7c0b5fb9a7ce4548595abe',1,0,'1379457222','__default|a:8:{s:15:\"session.counter\";i:15;s:19:\"session.timer.start\";i:1379371277;s:18:\"session.timer.last\";i:1379457221;s:17:\"session.timer.now\";i:1379457222;s:22:\"session.client.browser\";s:135:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36 FirePHP/4Chrome\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":2:{s:11:\"application\";O:8:\"stdClass\":1:{s:4:\"lang\";s:0:\"\";}s:15:\"com_creditcards\";O:8:\"stdClass\":2:{s:5:\"items\";O:8:\"stdClass\":1:{s:8:\"ordercol\";s:7:\"a.title\";}s:8:\"requests\";O:8:\"stdClass\":1:{s:8:\"ordercol\";s:7:\"a.title\";}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";b:1;s:2:\"id\";s:3:\"144\";s:4:\"name\";s:10:\"Super User\";s:8:\"username\";s:5:\"chris\";s:5:\"email\";s:26:\"chris@ammonitenetworks.com\";s:8:\"password\";s:65:\"f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh\";s:14:\"password_clear\";s:0:\"\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"1\";s:12:\"registerDate\";s:19:\"2013-08-06 18:14:12\";s:13:\"lastvisitDate\";s:19:\"2013-09-05 18:48:06\";s:10:\"activation\";s:1:\"0\";s:6:\"params\";s:0:\"\";s:6:\"groups\";a:1:{i:8;s:1:\"8\";}s:5:\"guest\";i:0;s:13:\"lastResetTime\";s:19:\"0000-00-00 00:00:00\";s:10:\"resetCount\";s:1:\"0\";s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";a:2:{i:0;i:1;i:1;i:8;}s:14:\"\\0\\0\\0_authLevels\";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"9c88dcf883e47a8e15a6ca4e9f5e7dfd\";}',144,'chris');
+INSERT INTO `cio8v_session` VALUES ('786d41b6c9d561f3b5e2b7a1b394e62b',0,1,'1380228817','__default|a:7:{s:15:\"session.counter\";i:30;s:19:\"session.timer.start\";i:1380227813;s:18:\"session.timer.last\";i:1380228793;s:17:\"session.timer.now\";i:1380228817;s:22:\"session.client.browser\";s:135:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36 FirePHP/4Chrome\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":2:{s:15:\"com_creditcards\";O:8:\"stdClass\":1:{s:5:\"items\";O:8:\"stdClass\":3:{s:6:\"filter\";O:8:\"stdClass\":1:{s:11:\"category_id\";s:1:\"8\";}s:10:\"limitstart\";i:0;s:8:\"ordercol\";s:7:\"a.title\";}}s:6:\"global\";O:8:\"stdClass\":1:{s:4:\"list\";O:8:\"stdClass\":1:{s:5:\"limit\";i:250;}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;s:1:\"9\";}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";N;s:14:\"\\0\\0\\0_authLevels\";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}}',0,'');
+INSERT INTO `cio8v_session` VALUES ('c7dc96bd1d4a86ed10e5aa1920e98d72',1,0,'1380228222','__default|a:8:{s:15:\"session.counter\";i:77;s:19:\"session.timer.start\";i:1380227881;s:18:\"session.timer.last\";i:1380228222;s:17:\"session.timer.now\";i:1380228222;s:22:\"session.client.browser\";s:135:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36 FirePHP/4Chrome\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":3:{s:11:\"application\";O:8:\"stdClass\":1:{s:4:\"lang\";s:0:\"\";}s:9:\"com_menus\";O:8:\"stdClass\":1:{s:4:\"edit\";O:8:\"stdClass\":1:{s:4:\"item\";O:8:\"stdClass\":4:{s:2:\"id\";a:5:{i:0;i:108;i:1;i:125;i:2;i:126;i:3;i:127;i:4;i:128;}s:4:\"data\";N;s:4:\"type\";N;s:4:\"link\";N;}}}s:4:\"item\";O:8:\"stdClass\":1:{s:6:\"filter\";O:8:\"stdClass\":1:{s:8:\"menutype\";s:8:\"mainmenu\";}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";b:1;s:2:\"id\";s:3:\"144\";s:4:\"name\";s:10:\"Super User\";s:8:\"username\";s:5:\"chris\";s:5:\"email\";s:26:\"chris@ammonitenetworks.com\";s:8:\"password\";s:65:\"f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh\";s:14:\"password_clear\";s:0:\"\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"1\";s:12:\"registerDate\";s:19:\"2013-08-06 18:14:12\";s:13:\"lastvisitDate\";s:19:\"2013-09-26 18:02:39\";s:10:\"activation\";s:1:\"0\";s:6:\"params\";s:0:\"\";s:6:\"groups\";a:1:{i:8;s:1:\"8\";}s:5:\"guest\";i:0;s:13:\"lastResetTime\";s:19:\"0000-00-00 00:00:00\";s:10:\"resetCount\";s:1:\"0\";s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";a:2:{i:0;i:1;i:1;i:8;}s:14:\"\\0\\0\\0_authLevels\";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"87580722f9e500387e4ec8e0124e5878\";}',144,'chris');
 /*!40000 ALTER TABLE `cio8v_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2293,7 +2314,7 @@ CREATE TABLE `cio8v_tags` (
   KEY `idx_left_right` (`lft`,`rgt`),
   KEY `idx_alias` (`alias`),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2323,7 +2344,7 @@ CREATE TABLE `cio8v_template_styles` (
   PRIMARY KEY (`id`),
   KEY `idx_template` (`template`),
   KEY `idx_home` (`home`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2338,6 +2359,7 @@ INSERT INTO `cio8v_template_styles` VALUES (7,'protostar',0,'0','protostar - Def
 INSERT INTO `cio8v_template_styles` VALUES (8,'isis',1,'0','isis - Default','{\"templateColor\":\"\",\"logoFile\":\"\"}');
 INSERT INTO `cio8v_template_styles` VALUES (9,'crosscliq',0,'1','crosscliq - Default','{}');
 INSERT INTO `cio8v_template_styles` VALUES (10,'crosscliq',1,'1','crosscliq - Default','{\"templateColor\":\"#000000\",\"headerColor\":\"#000000\",\"sidebarColor\":\"#000000\",\"logoFile\":\"images\\/isis 1.png\",\"admin_menus\":1,\"displayHeader\":1,\"statusFixed\":1,\"stickyToolbar\":1}');
+INSERT INTO `cio8v_template_styles` VALUES (11,'crosscliq',0,'0','crosscliq - att','{\"templateColor\":\"#0088cc\",\"templateBackgroundColor\":\"#f4f6f7\",\"logoFile\":\"images\\/att_logo_new_flat.gif\",\"cssfile\":\"att.css\",\"sitetitle\":\"ATT\",\"sitedescription\":\"\"}');
 /*!40000 ALTER TABLE `cio8v_template_styles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2357,7 +2379,7 @@ CREATE TABLE `cio8v_ucm_base` (
   KEY `idx_ucm_item_id` (`ucm_item_id`),
   KEY `idx_ucm_type_id` (`ucm_type_id`),
   KEY `idx_ucm_language_id` (`ucm_language_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2422,7 +2444,7 @@ CREATE TABLE `cio8v_ucm_content` (
   KEY `idx_core_checked_out_user_id` (`core_checked_out_user_id`),
   KEY `idx_core_created_user_id` (`core_created_user_id`),
   KEY `idx_core_type_id` (`core_type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Contains core content data in name spaced fields';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Contains core content data in name spaced fields';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2449,7 +2471,7 @@ CREATE TABLE `cio8v_update_sites` (
   `enabled` int(11) DEFAULT '0',
   `last_check_timestamp` bigint(20) DEFAULT '0',
   PRIMARY KEY (`update_site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Update Sites';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Update Sites';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2458,9 +2480,9 @@ CREATE TABLE `cio8v_update_sites` (
 
 LOCK TABLES `cio8v_update_sites` WRITE;
 /*!40000 ALTER TABLE `cio8v_update_sites` DISABLE KEYS */;
-INSERT INTO `cio8v_update_sites` VALUES (1,'Joomla Core','collection','http://update.joomla.org/core/list.xml',1,1378406499);
-INSERT INTO `cio8v_update_sites` VALUES (2,'Joomla Extension Directory','collection','http://update.joomla.org/jed/list.xml',1,1378406499);
-INSERT INTO `cio8v_update_sites` VALUES (3,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist_3.xml',1,1378406499);
+INSERT INTO `cio8v_update_sites` VALUES (1,'Joomla Core','collection','http://update.joomla.org/core/list.xml',1,1380218562);
+INSERT INTO `cio8v_update_sites` VALUES (2,'Joomla Extension Directory','collection','http://update.joomla.org/jed/list.xml',1,1380218562);
+INSERT INTO `cio8v_update_sites` VALUES (3,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist_3.xml',1,1380218562);
 /*!40000 ALTER TABLE `cio8v_update_sites` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2475,7 +2497,7 @@ CREATE TABLE `cio8v_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT '0',
   `extension_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`update_site_id`,`extension_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Links extensions to update sites';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Links extensions to update sites';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2512,7 +2534,7 @@ CREATE TABLE `cio8v_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COMMENT='Available Updates';
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Available Updates';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2527,51 +2549,52 @@ INSERT INTO `cio8v_updates` VALUES (3,3,0,'Chinese Traditional','','pkg_zh-TW','
 INSERT INTO `cio8v_updates` VALUES (4,3,0,'French','','pkg_fr-FR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/fr-FR_details.xml','');
 INSERT INTO `cio8v_updates` VALUES (5,3,0,'Galician','','pkg_gl-ES','package','',0,'3.0.2.2','','http://update.joomla.org/language/details3/gl-ES_details.xml','');
 INSERT INTO `cio8v_updates` VALUES (6,3,0,'German','','pkg_de-DE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/de-DE_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (7,3,0,'Hebrew','','pkg_he-IL','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/he-IL_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (8,3,0,'Hungarian','','pkg_hu-HU','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/hu-HU_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (9,3,0,'Afrikaans','','pkg_af-ZA','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/af-ZA_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (10,3,0,'Arabic Unitag','','pkg_ar-AA','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ar-AA_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (11,3,0,'Belarusian','','pkg_be-BY','package','',0,'3.0.2.1','','http://update.joomla.org/language/details3/be-BY_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (12,3,0,'Bulgarian','','pkg_bg-BG','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/bg-BG_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (13,3,0,'Catalan','','pkg_ca-ES','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/ca-ES_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (14,3,0,'Chinese Simplified','','pkg_zh-CN','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/zh-CN_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (15,3,0,'Croatian','','pkg_hr-HR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/hr-HR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (16,3,0,'Czech','','pkg_cs-CZ','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/cs-CZ_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (17,3,0,'Danish','','pkg_da-DK','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/da-DK_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (18,3,0,'Dutch','','pkg_nl-NL','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/nl-NL_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (19,3,0,'English AU','','pkg_en-AU','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/en-AU_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (20,3,0,'English US','','pkg_en-US','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/en-US_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (21,3,0,'Estonian','','pkg_et-EE','package','',0,'3.0.2.1','','http://update.joomla.org/language/details3/et-EE_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (22,3,0,'Italian','','pkg_it-IT','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/it-IT_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (23,3,0,'Japanese','','pkg_ja-JP','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ja-JP_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (24,3,0,'Korean','','pkg_ko-KR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ko-KR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (25,3,0,'Kurdish Sorani','','pkg_ckb-IQ','package','',0,'3.0.2.1','','http://update.joomla.org/language/details3/ckb-IQ_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (26,3,0,'Latvian','','pkg_lv-LV','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/lv-LV_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (27,3,0,'Macedonian','','pkg_mk-MK','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/mk-MK_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (28,3,0,'Norwegian Bokmal','','pkg_nb-NO','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/nb-NO_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (29,3,0,'Persian','','pkg_fa-IR','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/fa-IR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (30,3,0,'Polish','','pkg_pl-PL','package','',0,'3.1.4.2','','http://update.joomla.org/language/details3/pl-PL_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (31,3,0,'Portuguese','','pkg_pt-PT','package','',0,'3.0.2.2','','http://update.joomla.org/language/details3/pt-PT_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (32,3,0,'Russian','','pkg_ru-RU','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/ru-RU_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (33,3,0,'Scottish Gaelic','','pkg_gd-GB','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/gd-GB_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (34,3,0,'Slovak','','pkg_sk-SK','package','',0,'3.1.5.2','','http://update.joomla.org/language/details3/sk-SK_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (35,3,0,'Swedish','','pkg_sv-SE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sv-SE_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (36,3,0,'Syriac','','pkg_sy-IQ','package','',0,'3.1.2.1','','http://update.joomla.org/language/details3/sy-IQ_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (37,3,0,'Tamil','','pkg_ta-IN','package','',0,'3.1.5.2','','http://update.joomla.org/language/details3/ta-IN_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (38,3,0,'Thai','','pkg_th-TH','package','',0,'3.1.4.2','','http://update.joomla.org/language/details3/th-TH_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (39,3,0,'Turkish','','pkg_tr-TR','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/tr-TR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (40,3,0,'Ukrainian','','pkg_uk-UA','package','',0,'3.1.4.4','','http://update.joomla.org/language/details3/uk-UA_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (41,3,0,'Uyghur','','pkg_ug-CN','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/ug-CN_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (42,3,0,'Albanian','','pkg_sq-AL','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/sq-AL_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (43,3,0,'Portuguese Brazil','','pkg_pt-BR','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/pt-BR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (44,3,0,'Serbian Latin','','pkg_sr-YU','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sr-YU_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (45,3,0,'Spanish','','pkg_es-ES','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/es-ES_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (46,3,0,'Bosnian','','pkg_bs-BA','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/bs-BA_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (47,3,0,'Serbian Cyrillic','','pkg_sr-RS','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sr-RS_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (48,3,0,'Vietnamese','','pkg_vi-VN','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/vi-VN_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (49,3,0,'Bahasa Indonesia','','pkg_id-ID','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/id-ID_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (50,3,0,'Finnish','','pkg_fi-FI','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/fi-FI_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (51,3,0,'Swahili','','pkg_sw-KE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sw-KE_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (7,3,0,'Greek','','pkg_el-GR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/el-GR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (8,3,0,'Hebrew','','pkg_he-IL','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/he-IL_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (9,3,0,'Hungarian','','pkg_hu-HU','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/hu-HU_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (10,3,0,'Afrikaans','','pkg_af-ZA','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/af-ZA_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (11,3,0,'Arabic Unitag','','pkg_ar-AA','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ar-AA_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (12,3,0,'Belarusian','','pkg_be-BY','package','',0,'3.0.2.1','','http://update.joomla.org/language/details3/be-BY_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (13,3,0,'Bulgarian','','pkg_bg-BG','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/bg-BG_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (14,3,0,'Catalan','','pkg_ca-ES','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/ca-ES_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (15,3,0,'Chinese Simplified','','pkg_zh-CN','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/zh-CN_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (16,3,0,'Croatian','','pkg_hr-HR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/hr-HR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (17,3,0,'Czech','','pkg_cs-CZ','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/cs-CZ_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (18,3,0,'Danish','','pkg_da-DK','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/da-DK_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (19,3,0,'Dutch','','pkg_nl-NL','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/nl-NL_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (20,3,0,'English AU','','pkg_en-AU','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/en-AU_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (21,3,0,'English US','','pkg_en-US','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/en-US_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (22,3,0,'Estonian','','pkg_et-EE','package','',0,'3.0.2.1','','http://update.joomla.org/language/details3/et-EE_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (23,3,0,'Italian','','pkg_it-IT','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/it-IT_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (24,3,0,'Japanese','','pkg_ja-JP','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ja-JP_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (25,3,0,'Korean','','pkg_ko-KR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ko-KR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (26,3,0,'Kurdish Sorani','','pkg_ckb-IQ','package','',0,'3.0.2.1','','http://update.joomla.org/language/details3/ckb-IQ_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (27,3,0,'Latvian','','pkg_lv-LV','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/lv-LV_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (28,3,0,'Macedonian','','pkg_mk-MK','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/mk-MK_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (29,3,0,'Norwegian Bokmal','','pkg_nb-NO','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/nb-NO_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (30,3,0,'Persian','','pkg_fa-IR','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/fa-IR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (31,3,0,'Polish','','pkg_pl-PL','package','',0,'3.1.4.2','','http://update.joomla.org/language/details3/pl-PL_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (32,3,0,'Portuguese','','pkg_pt-PT','package','',0,'3.0.2.2','','http://update.joomla.org/language/details3/pt-PT_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (33,3,0,'Russian','','pkg_ru-RU','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ru-RU_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (34,3,0,'Scottish Gaelic','','pkg_gd-GB','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/gd-GB_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (35,3,0,'Slovak','','pkg_sk-SK','package','',0,'3.1.5.2','','http://update.joomla.org/language/details3/sk-SK_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (36,3,0,'Swedish','','pkg_sv-SE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sv-SE_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (37,3,0,'Syriac','','pkg_sy-IQ','package','',0,'3.1.2.1','','http://update.joomla.org/language/details3/sy-IQ_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (38,3,0,'Tamil','','pkg_ta-IN','package','',0,'3.1.5.2','','http://update.joomla.org/language/details3/ta-IN_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (39,3,0,'Thai','','pkg_th-TH','package','',0,'3.1.4.2','','http://update.joomla.org/language/details3/th-TH_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (40,3,0,'Turkish','','pkg_tr-TR','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/tr-TR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (41,3,0,'Ukrainian','','pkg_uk-UA','package','',0,'3.1.4.4','','http://update.joomla.org/language/details3/uk-UA_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (42,3,0,'Uyghur','','pkg_ug-CN','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/ug-CN_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (43,3,0,'Albanian','','pkg_sq-AL','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/sq-AL_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (44,3,0,'Portuguese Brazil','','pkg_pt-BR','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/pt-BR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (45,3,0,'Serbian Latin','','pkg_sr-YU','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sr-YU_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (46,3,0,'Spanish','','pkg_es-ES','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/es-ES_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (47,3,0,'Bosnian','','pkg_bs-BA','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/bs-BA_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (48,3,0,'Serbian Cyrillic','','pkg_sr-RS','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sr-RS_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (49,3,0,'Vietnamese','','pkg_vi-VN','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/vi-VN_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (50,3,0,'Bahasa Indonesia','','pkg_id-ID','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/id-ID_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (51,3,0,'Finnish','','pkg_fi-FI','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/fi-FI_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (52,3,0,'Swahili','','pkg_sw-KE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sw-KE_details.xml','');
 /*!40000 ALTER TABLE `cio8v_updates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2601,7 +2624,7 @@ CREATE TABLE `cio8v_user_notes` (
   PRIMARY KEY (`id`),
   KEY `idx_user_id` (`user_id`),
   KEY `idx_category_id` (`catid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2626,7 +2649,7 @@ CREATE TABLE `cio8v_user_profiles` (
   `profile_value` varchar(255) NOT NULL,
   `ordering` int(11) NOT NULL DEFAULT '0',
   UNIQUE KEY `idx_user_id_profile_key` (`user_id`,`profile_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Simple user profile storage table';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Simple user profile storage table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2649,7 +2672,7 @@ CREATE TABLE `cio8v_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__users.id',
   `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__usergroups.id',
   PRIMARY KEY (`user_id`,`group_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2681,8 +2704,8 @@ CREATE TABLE `cio8v_usergroups` (
   UNIQUE KEY `idx_usergroup_parent_title_lookup` (`parent_id`,`title`),
   KEY `idx_usergroup_title_lookup` (`title`),
   KEY `idx_usergroup_adjacency_lookup` (`parent_id`),
-  KEY `idx_usergroup_nested_set_lookup` (`lft`,`rgt`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  KEY `idx_usergroup_nested_set_lookup` (`lft`,`rgt`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2729,7 +2752,7 @@ CREATE TABLE `cio8v_users` (
   KEY `idx_block` (`block`),
   KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2738,8 +2761,8 @@ CREATE TABLE `cio8v_users` (
 
 LOCK TABLES `cio8v_users` WRITE;
 /*!40000 ALTER TABLE `cio8v_users` DISABLE KEYS */;
-INSERT INTO `cio8v_users` VALUES (144,'Super User','chris','chris@ammonitenetworks.com','f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh',0,1,'2013-08-06 18:14:12','2013-09-16 22:41:30','0','','0000-00-00 00:00:00',0);
-INSERT INTO `cio8v_users` VALUES (145,'Isis','isis','isis@notreal.com','1acd67bb43a82e1c7fb413a1919d4c20:YY72wp2cku8bgxGiTkcjQTt92GLV4ENH',0,0,'2013-09-05 18:37:19','2013-09-05 18:47:31','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
+INSERT INTO `cio8v_users` VALUES (144,'Super User','chris','chris@ammonitenetworks.com','f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh',0,1,'2013-08-06 18:14:12','2013-09-26 20:38:02','0','','0000-00-00 00:00:00',0);
+INSERT INTO `cio8v_users` VALUES (145,'Isis','isis','isis@notreal.com','1acd67bb43a82e1c7fb413a1919d4c20:YY72wp2cku8bgxGiTkcjQTt92GLV4ENH',0,0,'2013-09-05 18:37:19','2013-09-05 20:25:24','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (146,'User','user','user@notreal.com','adcdc3474a1463d87439edf44129eb9d:hCsajaDdgPv5ZuriMe3hK1R8Bh2JW1Q9',0,0,'2013-09-05 18:39:03','0000-00-00 00:00:00','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 /*!40000 ALTER TABLE `cio8v_users` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2758,7 +2781,7 @@ CREATE TABLE `cio8v_viewlevels` (
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_assetgroup_title_lookup` (`title`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2819,7 +2842,7 @@ CREATE TABLE `cio8v_weblinks` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2840,4 +2863,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-18  9:45:03
+-- Dump completed on 2013-09-26 14:54:38

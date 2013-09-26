@@ -375,10 +375,10 @@
     </tbody></table>
       <table width="300" cellspacing="8" cellpadding="8">
         <tbody><tr>
-          <td align="center" valign="middle" bgcolor="#4c1546"><a  href="/american-express" class="MAINnav">American Express</a></td>
+          <td align="center" valign="middle" bgcolor="#4c1546"><a  href="<?php echo JURI::current(); ?>/american-express" class="MAINnav">American Express</a></td>
         </tr>
         <tr>
-          <td align="center" valign="middle" bgcolor="#4c1546"><a href="/chase" class="MAINnav">Chase</a></td>
+          <td align="center" valign="middle" bgcolor="#4c1546"><a href="<?php echo JURI::current(); ?>/chase" class="MAINnav">Chase</a></td>
         </tr>
        <!-- <tr>
           <td align="center" valign="middle" bgcolor="#003B7B"><a href="digital_life/digital_life-HOME.html" class="MAINnav">Digital Life</a></td>

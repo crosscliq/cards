@@ -49,7 +49,6 @@ class CreditcardsController extends JControllerLegacy
 		$view->display();	
 
 
-		
 
 		return $this;
 	}
