@@ -1,10 +1,7 @@
 <?php
 
 $jinput = JFactory::getApplication()->input;
-
-var_dump($jinput );
-
-die(); ?>
+?>
 
 <?php echo  $jinput->get('category_id', '', 'int'); ?> 
 
