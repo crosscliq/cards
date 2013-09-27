@@ -20,31 +20,23 @@
 											?>
 
 															<li data-icon="false" > 
-															<?php 
-															if($item->accepted == 1) {
-																$url = 'yes.html';
-															} 
-															else {
-																$url =  JURI::current().'/no/';
-																$url .= '?cardid='.$item->id;
-																$url .= '&cardname='.$item->title;
-																$url .= '&network='.$item->network;
-															} 	
-
-															?>
+															
 
 
 
-															<a href="<?php echo $url; ?>">
+															
 																<div class="ui-btn-text">
 															 		<h3><?php echo  $item->title ; ?></h3>
 																</div>
 															 <img src="templates/crosscliq/img/<?=$item->network?>.png" alt="<?=$item->network?>" class="ui-li-thumb">
 
-																</a></li>
+																</li>
 											<?php endforeach; ?>
 						</ul>
+
 					</div>
+
+					<div id="bottomOverly">  <a href="<?php echo JURI::current(); ?>/no"> Don't see your card click here</a></div>
 
 <script>
 $( '#mylistview' ).alphascroll();
