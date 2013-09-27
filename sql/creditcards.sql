@@ -304,7 +304,7 @@ INSERT INTO `cio8v_categories` VALUES (8,38,1,13,14,1,'amex','com_creditcards','
 INSERT INTO `cio8v_categories` VALUES (9,39,1,15,16,1,'boa','com_creditcards','Bank of America','boa','','',0,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/bankofamerica.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:25:58',144,'2013-08-06 18:33:11',0,'*',1);
 INSERT INTO `cio8v_categories` VALUES (10,40,1,17,18,1,'chase','com_creditcards','Chase','chase','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/chase.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:26:14',144,'2013-08-06 18:33:34',0,'*',1);
 INSERT INTO `cio8v_categories` VALUES (11,41,1,19,20,1,'wells-fargo','com_creditcards','Wells Fargo','wells-fargo','','',0,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/wellsfargo.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:34:41',0,'0000-00-00 00:00:00',0,'*',1);
-INSERT INTO `cio8v_categories` VALUES (12,42,1,21,22,1,'tools','com_content','Tools','tools','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-09-27 17:46:54',0,'0000-00-00 00:00:00',60,'*',1);
+INSERT INTO `cio8v_categories` VALUES (12,42,1,21,22,1,'tools','com_content','Tools','tools','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-09-27 17:46:54',0,'0000-00-00 00:00:00',67,'*',1);
 /*!40000 ALTER TABLE `cio8v_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -776,7 +776,7 @@ CREATE TABLE `cio8v_creditcards_requests` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `card_id` int(255) NOT NULL,
   `card_name` varchar(255) NOT NULL,
-  `issuing Bank` varchar(255) NOT NULL,
+  `bank` varchar(255) NOT NULL,
   `customer_email` varchar(255) NOT NULL,
   `customer_number` text NOT NULL,
   `customer_name` varchar(255) NOT NULL,
@@ -786,8 +786,9 @@ CREATE TABLE `cio8v_creditcards_requests` (
   `modified_time` datetime NOT NULL,
   `created` datetime NOT NULL,
   `network` text NOT NULL,
+  `carrier` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -796,6 +797,11 @@ CREATE TABLE `cio8v_creditcards_requests` (
 
 LOCK TABLES `cio8v_creditcards_requests` WRITE;
 /*!40000 ALTER TABLE `cio8v_creditcards_requests` DISABLE KEYS */;
+INSERT INTO `cio8v_creditcards_requests` VALUES (1,0,'asdfasdf','asdfasdf','asdfasdf','asfasdfas','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-09-27 21:05:01','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (2,0,'attcard','awesome','chriscrosscliq.com','8017068019','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-09-27 21:07:27','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (3,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-09-27 21:10:29','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (4,0,'asdfasdf','awesome','chriscrosscliq.com','8017068019','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-09-27 21:11:45','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (5,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-09-27 21:11:57','',0);
 /*!40000 ALTER TABLE `cio8v_creditcards_requests` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1866,7 +1872,7 @@ CREATE TABLE `cio8v_menu` (
   KEY `idx_alias` (`alias`),
   KEY `idx_path` (`path`(255)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1875,7 +1881,7 @@ CREATE TABLE `cio8v_menu` (
 
 LOCK TABLES `cio8v_menu` WRITE;
 /*!40000 ALTER TABLE `cio8v_menu` DISABLE KEYS */;
-INSERT INTO `cio8v_menu` VALUES (1,'','Menu_Item_Root','root','','','','',1,0,0,0,0,'0000-00-00 00:00:00',0,0,'',0,'',0,103,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (1,'','Menu_Item_Root','root','','','','',1,0,0,0,0,'0000-00-00 00:00:00',0,0,'',0,'',0,105,0,'*',0);
 INSERT INTO `cio8v_menu` VALUES (2,'menu','com_banners','Banners','','Banners','index.php?option=com_banners','component',0,1,1,4,0,'0000-00-00 00:00:00',0,0,'class:banners',0,'',1,10,0,'*',1);
 INSERT INTO `cio8v_menu` VALUES (3,'menu','com_banners','Banners','','Banners/Banners','index.php?option=com_banners','component',0,2,2,4,0,'0000-00-00 00:00:00',0,0,'class:banners',0,'',2,3,0,'*',1);
 INSERT INTO `cio8v_menu` VALUES (4,'menu','com_banners_categories','Categories','','Banners/Categories','index.php?option=com_categories&extension=com_banners','component',0,2,2,6,0,'0000-00-00 00:00:00',0,0,'class:banners-cat',0,'',4,5,0,'*',1);
@@ -1927,6 +1933,7 @@ INSERT INTO `cio8v_menu` VALUES (129,'mainmenu','Other','other','','att/other','
 INSERT INTO `cio8v_menu` VALUES (130,'mainmenu','Other','other','','verizon/other','index.php?option=com_creditcards&view=items&layout=no&category_id=0&carrier=2&tmpl=component','component',1,115,2,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',86,87,0,'*',0);
 INSERT INTO `cio8v_menu` VALUES (131,'mainmenu','Other','other','','tmobile/other','index.php?option=com_creditcards&view=items&layout=no&category_id=0&carrier=3&tmpl=component','component',1,116,2,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',98,99,0,'*',0);
 INSERT INTO `cio8v_menu` VALUES (132,'mainmenu','Login','login','','login','index.php?option=com_users&view=login','component',1,1,1,25,0,'0000-00-00 00:00:00',0,1,'',0,'{\"login_redirect_url\":\"\\/\",\"logindescription_show\":\"1\",\"login_description\":\"\",\"login_image\":\"\",\"logout_redirect_url\":\"\\/\",\"logoutdescription_show\":\"1\",\"logout_description\":\"\",\"logout_image\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',101,102,0,'*',0);
+INSERT INTO `cio8v_menu` VALUES (133,'mainmenu','sent','sent','','sent','index.php?option=com_creditcards&view=items&layout=sent','component',1,1,1,10002,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',103,104,0,'*',0);
 /*!40000 ALTER TABLE `cio8v_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2275,8 +2282,7 @@ CREATE TABLE `cio8v_session` (
 
 LOCK TABLES `cio8v_session` WRITE;
 /*!40000 ALTER TABLE `cio8v_session` DISABLE KEYS */;
-INSERT INTO `cio8v_session` VALUES ('ade6693ca3af870a16f02bf1785d384c',0,0,'1380309947','__default|a:9:{s:15:\"session.counter\";i:17;s:19:\"session.timer.start\";i:1380309103;s:18:\"session.timer.last\";i:1380309834;s:17:\"session.timer.now\";i:1380309946;s:22:\"session.client.browser\";s:135:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36 FirePHP/4Chrome\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":1:{s:5:\"users\";O:8:\"stdClass\":1:{s:5:\"login\";O:8:\"stdClass\":1:{s:4:\"form\";O:8:\"stdClass\":2:{s:4:\"data\";a:0:{}s:6:\"return\";s:1:\"/\";}}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";b:0;s:2:\"id\";s:3:\"148\";s:4:\"name\";s:7:\"verizon\";s:8:\"username\";s:7:\"verizon\";s:5:\"email\";s:23:\"verizon@verizonfake.com\";s:8:\"password\";s:65:\"b91b640924d183f54b2f5c25de74cd81:NATwEcOpg8fm9BKzMG52Ussvu9cO8zFi\";s:14:\"password_clear\";s:0:\"\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"0\";s:12:\"registerDate\";s:19:\"2013-09-27 17:52:40\";s:13:\"lastvisitDate\";s:19:\"2013-09-27 19:11:29\";s:10:\"activation\";s:0:\"\";s:6:\"params\";s:92:\"{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}\";s:6:\"groups\";a:2:{i:2;s:1:\"2\";i:14;s:2:\"14\";}s:5:\"guest\";i:0;s:13:\"lastResetTime\";s:19:\"0000-00-00 00:00:00\";s:10:\"resetCount\";s:1:\"0\";s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":6:{s:11:\"admin_style\";s:0:\"\";s:14:\"admin_language\";s:0:\"\";s:8:\"language\";s:0:\"\";s:6:\"editor\";s:0:\"\";s:8:\"helpsite\";s:0:\"\";s:8:\"timezone\";s:0:\"\";}}s:14:\"\\0\\0\\0_authGroups\";a:3:{i:0;i:1;i:1;i:2;i:4;i:14;}s:14:\"\\0\\0\\0_authLevels\";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:8;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:17:\"application.queue\";a:1:{i:0;a:2:{s:7:\"message\";s:18:\"Please login first\";s:4:\"type\";s:7:\"message\";}}s:13:\"session.token\";s:32:\"b43a5b64699e6992493ff5b0280fa10d\";}',148,'verizon');
-INSERT INTO `cio8v_session` VALUES ('c7dc96bd1d4a86ed10e5aa1920e98d72',1,0,'1380310312','__default|a:8:{s:15:\"session.counter\";i:239;s:19:\"session.timer.start\";i:1380306540;s:18:\"session.timer.last\";i:1380310309;s:17:\"session.timer.now\";i:1380310311;s:22:\"session.client.browser\";s:135:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36 FirePHP/4Chrome\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":7:{s:11:\"application\";O:8:\"stdClass\":1:{s:4:\"lang\";s:0:\"\";}s:9:\"com_menus\";O:8:\"stdClass\":2:{s:5:\"items\";O:8:\"stdClass\":2:{s:6:\"filter\";O:8:\"stdClass\":1:{s:8:\"menutype\";s:8:\"mainmenu\";}s:10:\"limitstart\";i:0;}s:4:\"edit\";O:8:\"stdClass\":1:{s:4:\"item\";O:8:\"stdClass\":4:{s:2:\"id\";a:0:{}s:4:\"data\";N;s:4:\"type\";N;s:4:\"link\";N;}}}s:13:\"com_installer\";O:8:\"stdClass\":2:{s:7:\"message\";s:0:\"\";s:17:\"extension_message\";s:0:\"\";}s:11:\"com_content\";O:8:\"stdClass\":1:{s:4:\"edit\";O:8:\"stdClass\":1:{s:7:\"article\";O:8:\"stdClass\":2:{s:2:\"id\";a:1:{i:0;i:3;}s:4:\"data\";N;}}}s:9:\"com_users\";O:8:\"stdClass\":1:{s:4:\"edit\";O:8:\"stdClass\":3:{s:5:\"level\";O:8:\"stdClass\":2:{s:2:\"id\";a:0:{}s:4:\"data\";N;}s:5:\"group\";O:8:\"stdClass\":2:{s:2:\"id\";a:0:{}s:4:\"data\";N;}s:4:\"user\";O:8:\"stdClass\":2:{s:2:\"id\";a:0:{}s:4:\"data\";N;}}}s:14:\"com_categories\";O:8:\"stdClass\":1:{s:10:\"categories\";O:8:\"stdClass\":1:{s:6:\"filter\";O:8:\"stdClass\":1:{s:9:\"extension\";s:11:\"com_content\";}}}s:4:\"item\";O:8:\"stdClass\":1:{s:6:\"filter\";O:8:\"stdClass\":1:{s:8:\"menutype\";s:8:\"mainmenu\";}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";b:1;s:2:\"id\";s:3:\"144\";s:4:\"name\";s:10:\"Super User\";s:8:\"username\";s:5:\"chris\";s:5:\"email\";s:26:\"chris@ammonitenetworks.com\";s:8:\"password\";s:65:\"f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh\";s:14:\"password_clear\";s:0:\"\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"1\";s:12:\"registerDate\";s:19:\"2013-08-06 18:14:12\";s:13:\"lastvisitDate\";s:19:\"2013-09-27 17:06:16\";s:10:\"activation\";s:1:\"0\";s:6:\"params\";s:0:\"\";s:6:\"groups\";a:1:{i:8;s:1:\"8\";}s:5:\"guest\";i:0;s:13:\"lastResetTime\";s:19:\"0000-00-00 00:00:00\";s:10:\"resetCount\";s:1:\"0\";s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";a:2:{i:0;i:1;i:1;i:8;}s:14:\"\\0\\0\\0_authLevels\";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"e09ec34e8df2bc6f3cb4c8f728073c8a\";}',144,'chris');
+INSERT INTO `cio8v_session` VALUES ('ade6693ca3af870a16f02bf1785d384c',0,0,'1380316991','__default|a:8:{s:15:\"session.counter\";i:78;s:19:\"session.timer.start\";i:1380309103;s:18:\"session.timer.last\";i:1380316319;s:17:\"session.timer.now\";i:1380316991;s:22:\"session.client.browser\";s:135:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36 FirePHP/4Chrome\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":3:{s:5:\"users\";O:8:\"stdClass\":1:{s:5:\"login\";O:8:\"stdClass\":1:{s:4:\"form\";O:8:\"stdClass\":2:{s:4:\"data\";a:0:{}s:6:\"return\";s:1:\"/\";}}}s:15:\"com_creditcards\";O:8:\"stdClass\":1:{s:5:\"items\";O:8:\"stdClass\":3:{s:6:\"filter\";O:8:\"stdClass\":1:{s:11:\"category_id\";s:1:\"0\";}s:10:\"limitstart\";i:0;s:8:\"ordercol\";s:7:\"a.title\";}}s:6:\"global\";O:8:\"stdClass\":1:{s:4:\"list\";O:8:\"stdClass\":1:{s:5:\"limit\";i:250;}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";b:0;s:2:\"id\";s:3:\"148\";s:4:\"name\";s:7:\"verizon\";s:8:\"username\";s:7:\"verizon\";s:5:\"email\";s:23:\"verizon@verizonfake.com\";s:8:\"password\";s:65:\"b91b640924d183f54b2f5c25de74cd81:NATwEcOpg8fm9BKzMG52Ussvu9cO8zFi\";s:14:\"password_clear\";s:0:\"\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"0\";s:12:\"registerDate\";s:19:\"2013-09-27 17:52:40\";s:13:\"lastvisitDate\";s:19:\"2013-09-27 19:11:29\";s:10:\"activation\";s:0:\"\";s:6:\"params\";s:92:\"{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}\";s:6:\"groups\";a:2:{i:2;s:1:\"2\";i:14;s:2:\"14\";}s:5:\"guest\";i:0;s:13:\"lastResetTime\";s:19:\"0000-00-00 00:00:00\";s:10:\"resetCount\";s:1:\"0\";s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":6:{s:11:\"admin_style\";s:0:\"\";s:14:\"admin_language\";s:0:\"\";s:8:\"language\";s:0:\"\";s:6:\"editor\";s:0:\"\";s:8:\"helpsite\";s:0:\"\";s:8:\"timezone\";s:0:\"\";}}s:14:\"\\0\\0\\0_authGroups\";a:3:{i:0;i:1;i:1;i:2;i:4;i:14;}s:14:\"\\0\\0\\0_authLevels\";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:8;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"b43a5b64699e6992493ff5b0280fa10d\";}',148,'verizon');
 /*!40000 ALTER TABLE `cio8v_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2492,9 +2498,9 @@ CREATE TABLE `cio8v_update_sites` (
 
 LOCK TABLES `cio8v_update_sites` WRITE;
 /*!40000 ALTER TABLE `cio8v_update_sites` DISABLE KEYS */;
-INSERT INTO `cio8v_update_sites` VALUES (1,'Joomla Core','collection','http://update.joomla.org/core/list.xml',1,1380310312);
-INSERT INTO `cio8v_update_sites` VALUES (2,'Joomla Extension Directory','collection','http://update.joomla.org/jed/list.xml',1,1380310312);
-INSERT INTO `cio8v_update_sites` VALUES (3,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist_3.xml',1,1380310312);
+INSERT INTO `cio8v_update_sites` VALUES (1,'Joomla Core','collection','http://update.joomla.org/core/list.xml',1,1380315946);
+INSERT INTO `cio8v_update_sites` VALUES (2,'Joomla Extension Directory','collection','http://update.joomla.org/jed/list.xml',1,1380315946);
+INSERT INTO `cio8v_update_sites` VALUES (3,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist_3.xml',1,1380315946);
 /*!40000 ALTER TABLE `cio8v_update_sites` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2782,7 +2788,7 @@ CREATE TABLE `cio8v_users` (
 
 LOCK TABLES `cio8v_users` WRITE;
 /*!40000 ALTER TABLE `cio8v_users` DISABLE KEYS */;
-INSERT INTO `cio8v_users` VALUES (144,'Super User','chris','chris@ammonitenetworks.com','f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh',0,1,'2013-08-06 18:14:12','2013-09-27 18:49:07','0','','0000-00-00 00:00:00',0);
+INSERT INTO `cio8v_users` VALUES (144,'Super User','chris','chris@ammonitenetworks.com','f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh',0,1,'2013-08-06 18:14:12','2013-09-27 21:05:27','0','','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (145,'Isis','isis','isis@notreal.com','070d96e792dece4fafd1798f9c589a87:wQMv4NRT46uODtA4Ol1ZMQ5C5n8bqtQq',0,0,'2013-09-05 18:37:19','2013-09-05 20:25:24','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (146,'User','user','user@notreal.com','adcdc3474a1463d87439edf44129eb9d:hCsajaDdgPv5ZuriMe3hK1R8Bh2JW1Q9',0,0,'2013-09-05 18:39:03','0000-00-00 00:00:00','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (147,'Tmobile','Tmobile','Tmobile@fakeemail.com','e57f5dea44b6838b35151dfb13fec98a:ZnVggtp530jF72CDTNbZEZccg0c8n2UJ',0,0,'2013-09-27 17:52:16','2013-09-27 19:01:04','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
@@ -2890,4 +2896,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-27 14:10:24
+-- Dump completed on 2013-09-27 15:25:00
