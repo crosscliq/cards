@@ -83,7 +83,6 @@ $user = JFactory::getUser();
 
 
 
-
  </head>
 <body class="site <?php echo $option
 	. ' view-' . $view

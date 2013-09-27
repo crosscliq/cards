@@ -45,6 +45,7 @@
 						var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
 						// scroll to divider position
 						alphaScroll( touch.pageY );
+						console.log('scroll!');
 					});
 
 					// bind mouse events to scrollbar (for desktop browsers)
@@ -83,9 +84,11 @@
 
 				// handle orientation changes
 				$( window ).bind( 'orientationchange', function() {
-					$( '.alphascroll' ).unwrap().remove();
-					scrollbar = '';
-					createScrollbar();
+					if($( '.alphascroll' ).length > 0 ) {
+					    $( '.alphascroll' ).unwrap().remove();
+					    scrollbar = '';
+					    createScrollbar();	
+					}
 				});
 
 				function truncateScrollbar() {
