@@ -71,5 +71,23 @@ class CreditcardsController extends JControllerLegacy
 		return $this;
 	}
 
+	public function register() {
+
+		$input = JFactory::getApplication()->input;
+		JTable::addIncludePath(JPATH_COMPONENT_ADMINISTRATOR . '/tables');
+		$table = JTable::getInstance('Requests', 'CreditcardsTable');
+		$table->card_name = $input->get('card');
+		$table->bank = $input->get('bank');
+		$table->customer_email = $input->get('email');
+		$table->customer_number = $input->get('phone');
+		$table->carrier = $input->get('carrier');
+		$table->store();	
+
+		$this->setRedirect('/sent');
+		
+		
+		
+	}
+
 
 }
