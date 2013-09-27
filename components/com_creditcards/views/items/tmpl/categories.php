@@ -380,6 +380,9 @@
         <tr>
           <td align="center" valign="middle" bgcolor="#4c1546"><a href="<?php echo JURI::current(); ?>/chase" class="MAINnav">Chase</a></td>
         </tr>
+        <tr>
+          <td align="center" valign="middle" bgcolor="#4c1546"><a href="<?php echo JURI::current(); ?>/other" class="MAINnav">Other</a></td>
+        </tr>
        <!-- <tr>
           <td align="center" valign="middle" bgcolor="#003B7B"><a href="digital_life/digital_life-HOME.html" class="MAINnav">Digital Life</a></td>
         </tr>
