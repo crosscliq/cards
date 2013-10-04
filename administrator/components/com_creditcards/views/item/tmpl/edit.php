@@ -57,7 +57,7 @@ $params = $params->toArray();
 						<div class="control-group form-inline">
 							<?php echo $this->form->getLabel('accepted'); ?><?php echo $this->form->getInput('accepted'); ?>
 						</div>
-					
+						
 						<div class="control-group form-inline">
 						<?php echo $this->form->getLabel('published'); ?>
 						<?php echo $this->form->getInput('published'); ?>

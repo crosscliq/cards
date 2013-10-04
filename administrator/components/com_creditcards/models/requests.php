@@ -64,17 +64,13 @@ class CreditcardsModelRequests extends JModelList
                 $query->select(
                         $this->getState(
                                 'list.select',
-                                'a.id AS id, a.title AS title, a.file AS file,' .
-                                        'a.description AS description,' .
-                                        'a.checked_out AS checked_out,' . 
-                                        'a.published AS published,' . 
-                                        'a.network AS network,' .         
-                                        'a.ordering AS ordering, a.catid AS catid,' .
-                                        'a.access AS access, a.created_time AS created_time, a.modified_time AS modified_time,' .
-                                        'a.modified_time AS modified_time'
+                                'a.id AS id, a.card_name AS card_name, a.bank AS bank,' .
+                                        'a.customer_email AS customer_email,' .
+                                        'a.customer_name AS customer_name,' . 
+                                        'a.carrier AS carrier'         
                         )
                 );
-                $query->from($db->quoteName('#__creditcards_items') . ' AS a');
+                $query->from($db->quoteName('#__creditcards_requests') . ' AS a');
 
                 // Join over the language
                 //$query->select('l.title AS language_title')
@@ -85,19 +81,10 @@ class CreditcardsModelRequests extends JModelList
                  //       ->join('LEFT', '#__users AS uc ON uc.id=a.checked_out');
 
                 // Join over the categories.
-                $query->select('c.title AS category_title')
-                        ->join('LEFT', '#__categories AS c ON c.id = a.catid');
+              //  $query->select('c.title AS category_title')
+              //          ->join('LEFT', '#__categories AS c ON c.id = a.catid');
 
-                // Filter by published state
-                $published = $this->getState('filter.state');
-                if (is_numeric($published))
-                {
-                        $query->where('a.published = ' . (int) $published);
-                }
-                elseif ($published === '')
-                {
-                        $query->where('(a.published IN (0, 1))');
-                }
+               
 
                 // Filter by category.
                 $categoryId = $this->getState('filter.category_id');
@@ -136,8 +123,8 @@ class CreditcardsModelRequests extends JModelList
                 }
              
                 $query->order($db->escape($orderCol . ' ' . $orderDirn));
-                //echo $query;
-                //echo nl2br(str_replace('#__','jos_',$query));
+               // echo $query;
+                echo nl2br(str_replace('#__','cio8v_',$query));
                 return $query;
         }
 
@@ -197,7 +184,7 @@ class CreditcardsModelRequests extends JModelList
     $this->setState('params', $params);
 
     // List state information.
-    parent::populateState('a.title', 'asc');
+    parent::populateState('a.card_name', 'asc');
   }
 
      
