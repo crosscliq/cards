@@ -40,7 +40,7 @@
 					var alphascroll = $( content ).closest( 'div' ).children( '.alphascroll' );
 
 					// bind touch event to scrollbar (for touch devices)
-					$( alphascroll ).bind( 'touchmove', function( event ) {
+					$( alphascroll ).live( 'touchmove', function( event ) {
 						event.preventDefault();
 						var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
 						// scroll to divider position
@@ -49,7 +49,7 @@
 					});
 
 					// bind mouse events to scrollbar (for desktop browsers)
-					$( alphascroll ).bind( 'mousedown', function() {
+					$( alphascroll ).live( 'mousedown', function() {
 						$( '.ui-page-active' ).bind( 'mousemove', function( event ) {
 							// prevent text selection while scrolling
 							$( this ).css({
@@ -63,7 +63,7 @@
 						});
 
 						// return page to normal functioning after mouseup
-						$( '.ui-page-active' ).bind( 'mouseup', function() {
+						$( '.ui-page-active' ).live( 'mouseup', function() {
 							// release mousemove event control
 							$( '.ui-page-active' ).unbind( 'mousemove' );
 							// return text selection to default
