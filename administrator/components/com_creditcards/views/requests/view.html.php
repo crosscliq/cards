@@ -30,14 +30,14 @@ class CreditcardsViewRequests extends JViewLegacy
          CreditcardsHelper::addSubmenu('requests');
 
         $this->categories   = $this->get('CategoryOrders');
-        var_dump($this->categories );
-        $this->items        = $this->get('Requests');
-        var_dump($this->items);
+    
+        $this->items        = $this->get('Items');
+      
         $this->pagination   = $this->get('Pagination');
-        var_dump($this->categories );
+    
 
         $this->state        = $this->get('State');
-        var_dump($this->state );
+   
                 // Get data from the model
               
                 // Check for errors.

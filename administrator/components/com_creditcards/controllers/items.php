@@ -49,8 +49,7 @@ class CreditcardsControllerItems extends JControllerAdmin
                 // Get the input
                 $pks = $this->input->post->get('cid', array(), 'array');
                 $order = $this->input->post->get('order', array(), 'array');
-                FB::log($pks, 'primary keys');
-                FB::log($order, 'ordering');
+      
                 // Sanitize the input
                 JArrayHelper::toInteger($pks);
                 JArrayHelper::toInteger($order);

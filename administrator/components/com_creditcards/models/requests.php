@@ -23,23 +23,7 @@ class CreditcardsModelRequests extends JModelList
                 if (empty($config['filter_fields']))
                 {
                         $config['filter_fields'] = array(
-                                'id', 'a.id',
-                                'cid', 'a.cid', 'client_name',
-                                'name', 'a.name',
-                                'alias', 'a.alias',
-                                'state', 'a.published',
-                                'ordering', 'a.ordering',
-                                'language', 'a.language',
-                                'catid', 'a.catid', 'category_title',
-                                'checked_out', 'a.checked_out',
-                                'checked_out_time', 'a.checked_out_time',
-                                'created', 'a.created',
-                                'impmade', 'a.impmade',
-                                'imptotal', 'a.imptotal',
-                                'clicks', 'a.clicks',
-                                'publish_up', 'a.publish_up',
-                                'publish_down', 'a.publish_down',
-                                'state', 'sticky', 'a.sticky',
+                                'id', 'a.id'
                         );
                 }
 
@@ -66,7 +50,8 @@ class CreditcardsModelRequests extends JModelList
                                 'list.select',
                                 'a.id AS id, a.card_name AS card_name, a.bank AS bank,' .
                                         'a.customer_email AS customer_email,' .
-                                        'a.customer_name AS customer_name,' . 
+                                        'a.customer_name AS customer_name,' .
+                                        'a.customer_number AS customer_number,' . 
                                         'a.carrier AS carrier'         
                         )
                 );
@@ -87,14 +72,14 @@ class CreditcardsModelRequests extends JModelList
                
 
                 // Filter by category.
-                $categoryId = $this->getState('filter.category_id');
+               /* $categoryId = $this->getState('filter.category_id');
                 if (is_numeric($categoryId))
                 {
                         $query->where('a.catid = ' . (int) $categoryId);
-                }
+                }*/
 
                 // Filter by search in title
-                $search = $this->getState('filter.search');
+              /*  $search = $this->getState('filter.search');
                 if (!empty($search))
                 {
                         if (stripos($search, 'id:') === 0)
@@ -106,7 +91,7 @@ class CreditcardsModelRequests extends JModelList
                                 $search = $db->quote('%' . $db->escape($search, true) . '%');
                                 $query->where('(a.title LIKE ' . $search . ' OR a.description LIKE ' . $search . ')');
                         }
-                }
+                }*/
 
                 // Filter on the language.
                // if ($language = $this->getState('filter.language'))
@@ -124,7 +109,7 @@ class CreditcardsModelRequests extends JModelList
              
                 $query->order($db->escape($orderCol . ' ' . $orderDirn));
                // echo $query;
-                echo nl2br(str_replace('#__','cio8v_',$query));
+              //  echo nl2br(str_replace('#__','cio8v_',$query));
                 return $query;
         }
 
