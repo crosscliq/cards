@@ -71,6 +71,13 @@ class CreditcardsController extends JControllerLegacy
 		return $this;
 	}
 
+	public function redirect() {
+		header("Location: http://isismst.com");
+		die();
+
+	}
+	
+
 	public function register() {
 
 		$input = JFactory::getApplication()->input;

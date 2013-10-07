@@ -50,6 +50,9 @@ $sortFields = $this->getSortFields();
 		Joomla.tableOrdering(order, dirn, '');
 	}
 </script>
+
+Requests
+
 <form action="<?php echo JRoute::_('index.php?option=com_creditcards&view=items');?>" method="post" name="adminForm" id="adminForm">
 <?php if (!empty( $this->sidebar)): ?>
 	<div id="j-sidebar-container" class="span2">
@@ -130,8 +133,14 @@ $sortFields = $this->getSortFields();
 			<tbody>
 			<?php
 			$originalOrders = array();
+
+				
+
 			foreach ($this->items as $i => $item) :
 				
+
+			
+
 				$canCreate  = $user->authorise('core.create',     'com_creditcards');
 				$canEdit    = $user->authorise('core.edit',       'com_creditcards');
 				$canCheckin = $user->authorise('core.manage',     'com_checkin') || $item->checked_out == $user->get('id')|| $item->checked_out == 0;

@@ -30,9 +30,14 @@ class CreditcardsViewRequests extends JViewLegacy
          CreditcardsHelper::addSubmenu('requests');
 
         $this->categories   = $this->get('CategoryOrders');
-        $this->items        = $this->get('Items');
+        var_dump($this->categories );
+        $this->items        = $this->get('Requests');
+        var_dump($this->items);
         $this->pagination   = $this->get('Pagination');
+        var_dump($this->categories );
+
         $this->state        = $this->get('State');
+        var_dump($this->state );
                 // Get data from the model
               
                 // Check for errors.
@@ -71,13 +76,13 @@ class CreditcardsViewRequests extends JViewLegacy
         JToolbarHelper::title(JText::_('COM_CREDITCARDS_MANAGER_ITEMS'), 'items.png');
          if ($canDo->get('core.create'))
         {
-            JToolbarHelper::addNew('item.add');
+            JToolbarHelper::addNew('request.add');
         }
        
 
         if (($canDo->get('core.edit')))
         {
-            JToolbarHelper::editList('item.edit');
+            JToolbarHelper::editList('request.edit');
         }
 
         if ($canDo->get('core.edit.state'))
