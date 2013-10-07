@@ -14,7 +14,7 @@
             label=""
             required=""
             description=""
-            default="redirect"
+            default="gohome"
         />
 		</fieldset>
 	</fields>

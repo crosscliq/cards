@@ -71,7 +71,7 @@ class CreditcardsController extends JControllerLegacy
 		return $this;
 	}
 
-	public function redirect() {
+	public function gohome() {
 		header("Location: http://isismst.com");
 		die();
 
