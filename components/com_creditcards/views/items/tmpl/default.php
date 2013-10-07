@@ -36,7 +36,7 @@
 
 
 
-					<div id="bottomOverly">  <a href="<?php echo JURI::current(); ?>/no"> Don't see your card click here</a></div>
+					<div id="bottomOverly">  <a href="<?php echo JURI::current(); ?>/no">Don’t see your card? Click here.</a></div>
 
 </div>
 
