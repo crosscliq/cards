@@ -24,6 +24,7 @@ $archived	= $this->state->get('filter.published') == 2 ? true : false;
 $trashed	= $this->state->get('filter.published') == -2 ? true : false;
 $params		= (isset($this->state->params)) ? $this->state->params : new JObject;
 $saveOrder	= $listOrder == 'a.ordering';
+
 if ($saveOrder)
 {
 	$saveOrderingUrl = 'index.php?option=com_creditcards&task=items.saveOrderAjax&tmpl=component';
@@ -51,7 +52,7 @@ $sortFields = $this->getSortFields();
 	}
 </script>
 
-Requests
+
 
 <form action="<?php echo JRoute::_('index.php?option=com_creditcards&view=items');?>" method="post" name="adminForm" id="adminForm">
 <?php if (!empty( $this->sidebar)): ?>
@@ -109,13 +110,13 @@ Requests
 						<?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder); ?>
 					</th>
 					<th>
-						<?php echo JHtml::_('grid.sort', 'Network', 'a.network', $listDirn, $listOrder); ?>
+						<?php echo JHtml::_('grid.sort', 'Bank', 'a.bank', $listDirn, $listOrder); ?>
 					</th>
 					<th>
-						<?php echo JHtml::_('grid.sort', 'Ordering', 'a.ordering', $listDirn, $listOrder); ?>
+						<?php echo JHtml::_('grid.sort', 'Phone', 'a.customer_number', $listDirn, $listOrder); ?>
 					</th>
 					<th>
-						<?php echo JHtml::_('grid.sort', 'Category', 'a.catid', $listDirn, $listOrder); ?>
+						<?php echo JHtml::_('grid.sort', 'Email', 'a.customer_email', $listDirn, $listOrder); ?>
 					</th>
 			
 					<th width="1%" class="nowrap hidden-phone">
@@ -139,7 +140,6 @@ Requests
 			foreach ($this->items as $i => $item) :
 				
 
-			
 
 				$canCreate  = $user->authorise('core.create',     'com_creditcards');
 				$canEdit    = $user->authorise('core.edit',       'com_creditcards');
@@ -180,29 +180,28 @@ Requests
 							<?php endif; ?>
 							<?php if ($canEdit || $canEditOwn) : ?>
 								<a href="<?php echo JRoute::_('index.php?option=com_creditcards&task=item.edit&id='.$item->id);?>">
-									<?php echo $this->escape($item->title); ?></a>
+									<?php echo $this->escape($item->card_name); ?></a>
 							<?php else : ?>
-								<?php echo $this->escape($item->title); ?>
+								<?php echo $this->escape($item->card_name); ?>
 							<?php endif; ?>
 							
 						</td>
-						<td class="center hidden-phone">
-						
-								<?php echo $item->network; ?></span>
+						<td class="center ">
+								<?php echo $item->bank; ?>
 						</td>
-							<td class="center hidden-phone">
+						<td class="center ">
 						
-								<?php echo (int) $item->ordering; ?></span>
+								<?php echo  $item->customer_number; ?>
 						</td>
 
-						<td class="center hidden-phone">
+						<td class="center ">
 						
-								<?php echo  $item->category_title; ?></span>
+								<?php echo  $item->customer_email; ?>
 						</td>
 					
-						<td class="center hidden-phone">
+						<td class="center ">
 						
-								<?php echo (int) $item->id; ?></span>
+								<?php echo (int) $item->id; ?>
 						</td>
 					</tr>
 

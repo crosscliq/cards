@@ -73,7 +73,7 @@ class CreditcardsController extends JControllerLegacy
 
 	public function gohome() {
 		header("Location: http://isismst.com");
-		die();
+	
 
 	}
 	
