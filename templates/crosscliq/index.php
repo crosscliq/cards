@@ -93,6 +93,6 @@ $user = JFactory::getUser();
 <div data-role="page" style="background:#ccc!important" data-add-back-btn="true">
 		<jdoc:include type="component" />
 </div>
-
+<?php echo "<!-- " . var_dump($this->params) . " --> "; ?>
 </body>
 </html>
