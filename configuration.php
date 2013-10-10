@@ -47,7 +47,7 @@ class JConfig {
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';
-	public $robots = '';
+	public $robots = 'noindex';
 	public $sef = '1';
 	public $sef_rewrite = '1';
 	public $sef_suffix = '0';
@@ -59,7 +59,7 @@ class JConfig {
 	public $session_handler = 'database';
 	public $MetaRights = '';
 	public $sitename_pagetitles = '0';
-	public $force_ssl = '0';
+	public $force_ssl = '2';
 	public $feed_email = 'author';
 	public $cookie_domain = '';
 	public $cookie_path = '';

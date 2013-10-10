@@ -350,7 +350,7 @@
 		<h1>Isis</h1>
 	</div>
 
-	<h3 style="text-align:center;color:rgb(98, 23, 92);">
+	<h3 style="text-align:center;color:#9D1D86;">
 	Tap the logo below to see a list of Isis Ready Cards.<br/>
 
 	</h3>
@@ -375,13 +375,13 @@
     </tbody></table>
       <table width="300" cellspacing="8" cellpadding="8">
         <tbody><tr>
-          <td align="center" valign="middle" bgcolor="#4c1546"><a  href="<?php echo JURI::current(); ?>att" class="MAINnav">AT&T</a></td>
+          <td align="center" valign="middle" bgcolor="#9D1D86"><a  href="<?php echo JURI::current(); ?>att" class="MAINnav">AT&T</a></td>
         </tr>
         <tr>
-          <td align="center" valign="middle" bgcolor="#4c1546"><a href="<?php echo JURI::current(); ?>verizon" class="MAINnav">Verizon</a></td>
+          <td align="center" valign="middle" bgcolor="#9D1D86"><a href="<?php echo JURI::current(); ?>verizon" class="MAINnav">Verizon</a></td>
         </tr>
         <tr>
-          <td align="center" valign="middle" bgcolor="#4c1546"><a href="<?php echo JURI::current(); ?>tmobile" class="MAINnav">T-Mobile</a></td>
+          <td align="center" valign="middle" bgcolor="#9D1D86"><a href="<?php echo JURI::current(); ?>tmobile" class="MAINnav">T-Mobile</a></td>
         </tr>
        <!-- <tr>
           <td align="center" valign="middle" bgcolor="#003B7B"><a href="digital_life/digital_life-HOME.html" class="MAINnav">Digital Life</a></td>

@@ -7,7 +7,7 @@
 				</div>
 
 
-	<h3 style="text-align:center;color:rgb(98, 23, 92);">
+	<h3 style="text-align:center;color:#9D1D86;">
 	Your request has been received.<br/>
 
 	</h3>

@@ -34,7 +34,7 @@ else
 	$fullWidth = 0;
 }
 
-
+$doc->setTitle('ISIS Sales Tools');
 $logo = $this->params->get('logoFile');
 
 $templateColor = $this->params->get('templateColor');

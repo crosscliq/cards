@@ -1,5 +1,5 @@
 
-<div id="alphascroll" data-role="page">
+<div id="alphascroll" data-role="page"  data-title="ISIS Sales Tools">
 	
 				<div data-role="header" data-position="fixed">
 				<a href="no.php" data-rel="back" data-icon="back" data-theme="b">Back</a>
@@ -40,6 +40,8 @@
 
 </div>
 
-<script>
-
+<script type="text/javascript">
+if (typeof jQuery == 'undefined') {  
+    window.location.href='http://cards.isismst.com';
+}
 </script>

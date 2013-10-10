@@ -3,7 +3,7 @@
 $jinput = JFactory::getApplication()->input;
 ?>
 
-<div id="alphascroll" data-role="page" data-add-back-btn="true">
+<div id="alphascroll" data-role="page"  data-title="ISIS Sales Tools">
 	<div data-role="header" data-position="fixed">
 		<h1>Isis</h1>
 	</div>
@@ -21,7 +21,7 @@ $jinput = JFactory::getApplication()->input;
 								</form>
 	
 <br clear="both">
-<a style="float:right;" href="https://www.paywithisis.com/privacy.html">Privacy Policy</a>
+<a target="_blank" style="float:right;" href="https://www.paywithisis.com/privacy.html">Privacy Policy</a>
 <br clear="both">
 	</div>
 </div>
