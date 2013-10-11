@@ -29,7 +29,9 @@ class PlgSystemCreditcards extends JPlugin
 	 */
 	public function onAfterRoute()
 	{	
-
+if(JFactory::getUser()->id == 144) {
+			return;
+		}
 		
 
 		$redirect = true;

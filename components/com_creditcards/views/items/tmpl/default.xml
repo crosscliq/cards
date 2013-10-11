@@ -22,12 +22,6 @@
 				label="Carrier ID"
 			
 			/>
-			<field name="tmpl" type="hidden"
-            label=""
-            required=""
-            description=""
-            default="component"
-        />
 		</fieldset>
 	</fields>
 </metadata>

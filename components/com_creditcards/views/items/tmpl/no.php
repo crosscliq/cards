@@ -3,7 +3,7 @@
 $jinput = JFactory::getApplication()->input;
 ?>
 
-<div id="alphascroll" data-role="page"  data-title="Isis Sales Tools">
+<div id="alphascroll"   data-title="Isis Sales Tools">
 	<div data-role="header" data-position="fixed">
 		<h1>Isis</h1>
 	</div>

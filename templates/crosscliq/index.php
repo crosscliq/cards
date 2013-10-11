@@ -33,6 +33,7 @@ else
 {
 	$fullWidth = 0;
 }
+
 $doc->setTitle('Isis Sales Tools');
 $logo = $this->params->get('logoFile');
 
@@ -48,7 +49,7 @@ $cssfile = $this->params->get('cssfile');
 
 
 // Add Stylesheets
-//$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
+$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
 
 
 $doc->addStyleSheet('templates/'.$this->template.'/css/jquery.mobile-1.2.0.min.css');
@@ -80,6 +81,8 @@ $user = JFactory::getUser();
 	<meta name="viewport" content="initial-scale=1">
 	<jdoc:include type="head" />
 
+
+
  </head>
 <body class="site <?php echo $option
 	. ' view-' . $view
@@ -87,20 +90,10 @@ $user = JFactory::getUser();
 	. ($task ? ' task-' . $task : ' no-task')
 	. ($itemid ? ' itemid-' . $itemid : '');
 ?>">
+<div data-role="page" style="background:#ccc!important" data-add-back-btn="false">
 
-<div data-role="page" style="background:#ccc!important" data-add-back-btn="true">
-				<div data-role="header" data-position="fixed">
-				<!--<a href="no.php" data-rel="back" data-icon="back" data-theme="b">Back</a>-->
-					<h1><a href="/">Isis</a></h1>
-				
-							  <div class="ui-bar">
-							   <h2><b><?=$this->items[0]->category_title;?></b></h2>
-							  </div>
-				</div>
 		<jdoc:include type="component" />
 </div>
-<div style="text-align:center; width:100%;position:absolute; bottom:0; left:0; font-size:9px; color:#888; z-index:9999">
-&copy / &reg JVL Ventures, LLC
-</div>
+
 </body>
 </html>

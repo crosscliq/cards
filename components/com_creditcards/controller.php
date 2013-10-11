@@ -94,7 +94,7 @@ class CreditcardsController extends JControllerLegacy
 		$table->carrier = $input->get('carrier');
 		$table->store();	
 
-		$this->setRedirect($input->get('return'));
+		$this->setRedirect($input->get('return','','raw'));
 		
 		
 		
