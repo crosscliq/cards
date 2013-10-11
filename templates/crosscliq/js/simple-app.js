@@ -4,6 +4,6 @@ $(document).ready(function(){
  //   			$( '#mylistview' ).listview( 'refresh' ).alphascroll();
 		//	mySwiper.reInit();
  // });
-
+document.title = "Isis Sales Tool";
 
 })

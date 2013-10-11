@@ -25,7 +25,7 @@
 	background:red;
 }
 
-
+.ul-listview { margin-bottom:50px!important; }
 -----------------------------------------------------------------------------------------------------------*/
 h1 a {
 	background:url(../img/logo.png) no-repeat;
@@ -857,7 +857,9 @@ a.ui-link-inherit {
 margin-bottom:5px;
 }
 .card_name {
-
+color:#a4a4a4;
+padding-left:10px;
 margin-bottom: 6px;
 text-transform: capitalize;
-font-size: small;}
+font-size: small;
+}

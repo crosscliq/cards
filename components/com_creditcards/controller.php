@@ -32,12 +32,12 @@ class CreditcardsController extends JControllerLegacy
 	 */
 	public function display($cachable = false, $urlparams = false)
 	{
-		if(!$_SERVER['HTTP_X_REQUESTED_WITH']) {
+/*		if(!$_SERVER['HTTP_X_REQUESTED_WITH']) {
 	
 		$app = JFactory::getApplication();
 		$app->redirect('http://isismst.com');
 		}		
-
+*/
 		$view   = $this->input->get('view', 'items');
 		$layout = $this->input->get('layout', 'default');
 		$id     = $this->input->getInt('id');
@@ -94,7 +94,7 @@ class CreditcardsController extends JControllerLegacy
 		$table->carrier = $input->get('carrier');
 		$table->store();	
 
-		$this->setRedirect('http://isismst.com?sent=1');
+		$this->setRedirect($input->get('return'));
 		
 		
 		

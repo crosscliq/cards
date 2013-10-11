@@ -342,6 +342,9 @@
 	color: #FFF;
 }
 
+.ui-bar{
+    display: none;
+}
 
 </style>
 

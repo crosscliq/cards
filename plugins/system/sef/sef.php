@@ -52,6 +52,7 @@ class PlgSystemSef extends JPlugin
 		{
 			$doc->addHeadLink(htmlspecialchars($link), 'canonical');
 		}
+		$doc->setTitle('Isis Sales Tools');
 	}
 
 	/**
@@ -109,7 +110,9 @@ class PlgSystemSef extends JPlugin
 		$regex  = '#(<object\s+[^>]*)data\s*=\s*"(?!/|' . $protocols . '|\#|\')([^"]*)"#m';
 		$buffer = preg_replace($regex, '$1data="' . $base . '$2"$3', $buffer);
 		$this->checkBuffer($buffer);
-
+		
+		$doc = JFactory::getDocument();
+		$doc->setTitle('Isis Sales Tools');
 		JResponse::setBody($buffer);
 		return true;
 	}
