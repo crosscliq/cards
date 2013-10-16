@@ -7,7 +7,7 @@
 					<h1><a href="<?=substr(JURI::current(), 0, strrpos ( JURI::current(), '/' ));?>">Isis</a></h1>
 
 
-		<?php $vendor = JFactory::getSession()->get('vendor'); var_dump($vendor);?>
+		<?php $vendor = JFactory::getSession()->get('vendor'); ?>
 <a href="#popupMenu" data-role="button" class="ui-btn-right" data-icon="bars"  data-rel="popup">Menu</a>
 <div data-role="popup" id="popupMenu" >
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="b">
