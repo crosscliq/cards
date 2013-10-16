@@ -59,7 +59,7 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/isis.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/idangerous.swiper.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/idangerous.swiper.scrollbar.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/simple-app.css');
-$doc->addStyleSheet('/templates'.$this->template.'/css/list.css');
+$doc->addStyleSheet('/templates/'.$this->template.'/css/list.css');
 $doc->addScript('templates/' .$this->template. '/js/jquery-1.8.3.min.js');
 $doc->addScript('templates/' .$this->template. '/js/jquery.mobile-1.2.0.min.js');
 $doc->addScript('templates/' .$this->template. '/js/jquery.mobile.alphascroll.js');
