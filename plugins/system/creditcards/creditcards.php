@@ -37,6 +37,10 @@ if(JFactory::getUser()->id == 144) {
 		$redirect = true;
 		$app = JFactory::getApplication();
 		if($app->isSite()) {
+		
+			$session = JFactory::getSession();
+			$session->set('vendor', explode('/', str_replace(JURI::base(), '', JURI::current()))[0]);
+			
 			return;
 		}	
 
