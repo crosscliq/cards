@@ -15,7 +15,7 @@ $doc->addStyleSheet('/templates/crosscliq/css/list.css');
 <div data-role="popup" id="popupMenu" >
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="b">
         <li><a data-rel="popup" href="<?=JURI::base().$vendor?>">Card Tool</a></li>
-        <li><a data-rel="popup" href="http://demo.isismst.com">Demo</a></li>
+        <li><a data-rel="popup" href="http://demo.isismst.com/<?=$vendor?>">Demo</a></li>
         <li><a data-rel="popup" href="http://locator.isismst.com">Locator</a></li>
         <li><a data-rel="popup" href="http://offers.isismst.com">Offer Tool</a></li>
     </ul>
