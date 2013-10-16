@@ -6,7 +6,9 @@ $jinput = JFactory::getApplication()->input;
 <div id="alphascroll"   data-title="Isis Sales Tools">
 	<div data-role="header" data-position="fixed">
 		<h1><a href="<?=substr(JURI::current(), 0, strrpos ( JURI::current(), '/' ));?>">Isis</a></h1>
-		<?php $vendor = JFactory::getSession()->get('vendor');?>
+	<?php if(!strpos(JURI::current() , '/att')) : ?>
+
+<?php $vendor = JFactory::getSession()->get('vendor');?>
 <a href="#popupMenu" data-role="button" class="ui-btn-right" data-icon="bars"  data-rel="popup">Menu</a>
 <div data-role="popup" id="popupMenu" >
     <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="b">
@@ -16,6 +18,8 @@ $jinput = JFactory::getApplication()->input;
         <li><a data-rel="popup" href="http://offers.isismst.com">Offer Tool</a></li>
     </ul>
 </div>
+
+<?php endif; ?>
 	</div>
 	<div data-role="content">
 

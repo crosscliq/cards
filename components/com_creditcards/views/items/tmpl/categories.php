@@ -7,6 +7,9 @@ $doc->addStyleSheet('/templates/crosscliq/css/list.css');
 
 <div data-role="header" data-position="fixed">
 		<h1>Isis</h1>
+
+<?php if(!strpos(JURI::current() , '/att')) : ?>
+
 <?php $vendor = JFactory::getSession()->get('vendor');?>
 <a href="#popupMenu" data-role="button" class="ui-btn-right" data-icon="bars"  data-rel="popup">Menu</a>
 <div data-role="popup" id="popupMenu" >
@@ -18,6 +21,7 @@ $doc->addStyleSheet('/templates/crosscliq/css/list.css');
     </ul>
 </div>
 
+<?php endif; ?>
 	</div>
 
 	<h3 style="text-align:center;color:#9D1D86;">
