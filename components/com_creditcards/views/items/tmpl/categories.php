@@ -28,49 +28,11 @@ $doc->addStyleSheet('/templates/crosscliq/css/list.css');
 Tap the issuer name below to see a list of eligible payment cards.<br>
 	</h3>
 	
-
-	<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tbody>
-  <tr>
-    <td align="center" valign="top"><!-- #BeginLibraryItem "/Library/toolbar2-Home.lbi" --><table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td align="center" valign="middle" bgcolor="#818285"><table border="0" cellspacing="0" cellpadding="4">
-      <tbody>
-    </tbody></table></td>
-  </tr>
-</tbody></table><!-- #EndLibraryItem --></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><table width="90%" border="0" cellpadding="0" cellspacing="0">
-      <tbody><tr>
-        <td>&nbsp;</td>
-      </tr>
-    </tbody></table>
-      <table width="300" cellspacing="8" cellpadding="8">
-        <tbody><tr>
-          <td align="center" valign="middle" bgcolor="#9D1D86"><a  href="<?php echo JURI::current(); ?>/american-express" class="MAINnav">American Express</a></td>
-        </tr>
-        <tr>
-          <td align="center" valign="middle" bgcolor="#9D1D86"><a href="<?php echo JURI::current(); ?>/chase" class="MAINnav">Chase</a></td>
-        </tr>
-        <tr>
-          <td align="center" valign="middle" bgcolor="#9D1D86"><a href="<?php echo JURI::current(); ?>/other" class="MAINnav">Other</a></td>
-        </tr>
-       <!-- <tr>
-          <td align="center" valign="middle" bgcolor="#003B7B"><a href="digital_life/digital_life-HOME.html" class="MAINnav">Digital Life</a></td>
-        </tr>
-        <tr>
-          <td align="center" valign="middle" bgcolor="#7FC241"><a href="international/international-HOME.html" class="MAINnav">International</a></td>
-        </tr>
-        <tr>
-          <td align="center" valign="middle" bgcolor="#0197D5"><a href="smart_solutions/smart_solutions-HOME.html" class="MAINnav">Smart Solutions</a></td>
-        </tr>
-        <tr>
-          <td align="center" valign="middle" bgcolor="#757679"><a href="business/business-HOME.html" class="MAINnav">Business</a></td>
-        </tr> -->
-    </tbody></table>      <br></td>
-  </tr>
-</tbody></table>
+<div style="width:300px; text-align:center; margin: 0 auto;">
+	<a class="bigbutton" href="<?php echo JURI::current(); ?>/american-express" class="MAINnav">American Express</a> <br>
+      <a class="bigbutton"  href="<?php echo JURI::current(); ?>/chase" class="MAINnav">Chase</a><br>
+      <a class="bigbutton" href="<?php echo JURI::current(); ?>/other" class="MAINnav">Other</a><br>
+</div>
 
 
 

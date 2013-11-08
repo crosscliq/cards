@@ -863,3 +863,26 @@ margin-bottom: 6px;
 text-transform: capitalize;
 font-size: small;
 }
+
+
+
+a.bigbutton {
+	text-align: -webkit-center;
+	vertical-align: middle;
+	background-color: rgb(157, 29, 134);
+	width: 300px;
+	display: block;
+	color: #fff !important;
+	font-family: "Omnes", Verdana, Helvetica, Arial, sans-serif !important;
+	font-size: 32px !important;
+	color: #FFF !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	text-decoration: none !important;
+	text-align: center !important;
+	vertical-align: middle !important;
+	letter-spacing: -1px !important;
+	line-height: 30px !important;
+	padding:  7px 0;
+
+}
