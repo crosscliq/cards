@@ -11,15 +11,8 @@ $doc->addStyleSheet('/templates/crosscliq/css/list.css');
 <?php if(!strpos(JURI::current() , '/att')) : ?>
 
 <?php $vendor = JFactory::getSession()->get('vendor');?>
-<a href="#popupMenu" data-role="button" class="ui-btn-right" data-icon="bars"  data-rel="popup">Menu</a>
-<div data-role="popup" id="popupMenu" >
-    <ul data-role="listview" data-inset="true" style="width:180px;" data-theme="b">
-        <li><a data-rel="popup" href="<?=JURI::base().$vendor?>">Card Tool</a></li>
-        <li><a data-rel="popup" href="http://demo.isismst.com/<?=$vendor?>">Demo</a></li>
-        <li><a data-rel="popup" href="http://locator.isismst.com">Locator</a></li>
-        <li><a data-rel="popup" href="http://offers.isismst.com">Offer Tool</a></li>
-    </ul>
-</div>
+<a href="http://isismst.com/<?=$vendor?>"  class="ui-btn-right" data-icon="bars"  >Menu</a>
+
 
 <?php endif; ?>
 	</div>
