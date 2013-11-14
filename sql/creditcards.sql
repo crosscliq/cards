@@ -610,7 +610,7 @@ CREATE TABLE `cio8v_creditcards_items` (
   `verizon` tinyint(4) NOT NULL DEFAULT '1',
   `tmobile` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=218 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=219 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -748,10 +748,10 @@ INSERT INTO `cio8v_creditcards_items` VALUES (134,'Virgin Atlantic®','','','',0
 INSERT INTO `cio8v_creditcards_items` VALUES (135,'World Wildlife Fund','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,1,'',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (136,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,0,'',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (137,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',9,0,'',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (138,'Slate','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (139,'Freedom','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (140,'Sapphire','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (141,'Palladium','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (138,'Chase Slate®','','','',76,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (139,'Chase Freedom® Card','','','',74,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (140,'CHASE SAPPHIRE® CARD','','','',77,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (141,'J.P. Morgan Palladium Card','','','',75,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (142,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,0,'visa',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (143,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,0,'visa',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (144,'Wells Fargo Rewards® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
@@ -828,6 +828,7 @@ INSERT INTO `cio8v_creditcards_items` VALUES (214,'TrueEarnings® Business Card 
 INSERT INTO `cio8v_creditcards_items` VALUES (215,'Zync® Card from American Express','','','',71,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-08 00:31:19',8,1,'amex',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (216,'Clear from American Express® Card','','','',72,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 14:17:48',8,1,'amex',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (217,'Platinum Delta Skymiles® Business Credit Card','','','',73,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 14:26:12',8,1,'amex',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (218,'CHASE SAPPHIRE PREFERRED®  ','','','',78,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-23 15:03:40',10,1,'visa',1,1,1);
 /*!40000 ALTER TABLE `cio8v_creditcards_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -854,7 +855,7 @@ CREATE TABLE `cio8v_creditcards_requests` (
   `network` text NOT NULL,
   `carrier` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=89 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -874,7 +875,7 @@ INSERT INTO `cio8v_creditcards_requests` VALUES (12,0,'asdf','asf','asdf','asdf'
 INSERT INTO `cio8v_creditcards_requests` VALUES (13,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-07 17:47:51','',0);
 INSERT INTO `cio8v_creditcards_requests` VALUES (14,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-09 17:08:31','',2);
 INSERT INTO `cio8v_creditcards_requests` VALUES (15,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 14:52:14','',3);
-INSERT INTO `cio8v_creditcards_requests` VALUES (16,0,'asdfasdf','asdfasdf','chriscrosscliq.com','8017068019','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 20:21:26','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (16,0,'asdfasdf','asdfasdf','chris@crosscliq.com','8017068019','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 20:21:26','',1);
 INSERT INTO `cio8v_creditcards_requests` VALUES (17,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 20:22:00','',0);
 INSERT INTO `cio8v_creditcards_requests` VALUES (18,0,'asdfasd','asdfasdf','asdf','asdf','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 20:26:59','',1);
 INSERT INTO `cio8v_creditcards_requests` VALUES (19,0,'asdf','asdf','asdf','asdf','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 20:27:33','',1);
@@ -887,10 +888,66 @@ INSERT INTO `cio8v_creditcards_requests` VALUES (25,0,'asdfasdf','asdfasdf','asd
 INSERT INTO `cio8v_creditcards_requests` VALUES (26,0,'asdfasdf','asdfasdf','asdfas','asdfasdf','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-11 21:02:29','',1);
 INSERT INTO `cio8v_creditcards_requests` VALUES (27,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-11 21:02:34','',0);
 INSERT INTO `cio8v_creditcards_requests` VALUES (28,0,'test','test','test','test','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-11 21:07:16','',1);
-INSERT INTO `cio8v_creditcards_requests` VALUES (29,0,'asdfasdf','asdfasdf','shaecrosscliq.com','8017068019','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-11 21:07:37','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (29,0,'asdfasdf','asdfasdf','shae@crosscliq.com','8017068019','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-11 21:07:37','',1);
 INSERT INTO `cio8v_creditcards_requests` VALUES (30,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-11 21:16:57','',0);
 INSERT INTO `cio8v_creditcards_requests` VALUES (31,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-11 21:17:01','',0);
-INSERT INTO `cio8v_creditcards_requests` VALUES (32,0,'VisaSignature','BankofAmerica','chris.parkpaywithisis.com','888-888-8888','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-14 18:14:39','',3);
+INSERT INTO `cio8v_creditcards_requests` VALUES (32,0,'VisaSignature','BankofAmerica','chris.park@paywithisis.com','888-888-8888','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-14 18:14:39','',3);
+INSERT INTO `cio8v_creditcards_requests` VALUES (33,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-22 15:06:46','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (34,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-22 15:06:55','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (35,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-23 21:04:43','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (36,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-23 21:04:48','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (37,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-24 21:25:46','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (38,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-24 21:26:03','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (39,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-24 21:26:15','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (40,0,'','Huntington','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-25 18:35:33','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (41,0,'','Mastercard','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-25 18:36:20','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (42,0,'','joseph.f.mayberrygmail.comPNCBankDebitCards','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-25 18:36:25','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (43,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-25 18:36:33','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (44,0,'','scefederalcredituniondebitcard','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-27 00:53:50','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (45,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-31 03:24:57','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (46,0,'','BankofAmerica','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-03 23:44:03','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (47,0,'','USAA','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-04 17:22:28','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (48,0,'','oklahomacentralcreditunion','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-04 19:27:57','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (49,0,'','oklahomacentralcreditunion','dereklester10@gmail.com','9188539084','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-04 19:29:12','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (50,0,'Visa','OldNationalBank','jonwillone@gmail.com','8122595331','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-04 22:10:06','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (51,0,'Discover','DiscoverCard','jonwillone@gmail.com','8122595331','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-04 22:10:37','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (52,0,'','CentralPacificBank','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-05 00:35:51','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (53,0,'','USAA','mauitropix67@hotmail.com','8082641216','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-05 00:36:36','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (54,0,'','CentralPacificBank','mauitropix67@hotmail.com','8082641216','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-05 00:37:11','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (55,0,'','CapitalOne','mauitropix67@hotmail.com','8082641216','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-05 00:37:41','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (56,0,'','Joseph.f.mayberrygmail.comPNCBankDebitcards','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-05 15:41:36','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (57,0,'Ultimaterewards','Chase','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-05 18:01:00','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (58,0,'wellsfargo','bankofamerica','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-05 19:24:15','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (59,0,'PlatinumCard','CapitalOne','Jpostatt.prime@comms.com','765-491-4440','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-05 21:32:02','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (60,0,'','Joseph.f.mayberrygmail.comPNCBankVisaCheckCard','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-06 15:03:52','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (61,0,'','BankofAmerica','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-06 17:18:03','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (62,0,'','CitiBank','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-06 19:51:17','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (63,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-06 23:55:26','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (64,0,'Chasedebit','Chase','Travis.collins67@yahoo.com','4322961120','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-07 18:40:49','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (65,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 16:32:44','',2);
+INSERT INTO `cio8v_creditcards_requests` VALUES (66,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 16:32:48','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (67,0,'','Capitalone','Rchampagne207@yahoo.com','2073551232','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 18:16:30','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (68,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 20:03:44','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (69,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 20:03:54','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (70,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 20:04:03','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (71,0,'','americansavingsbank','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 21:44:01','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (72,0,'','Towerfederal','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 21:45:45','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (73,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-08 22:04:04','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (74,0,'','bankofamerica','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 01:33:15','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (75,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 01:33:23','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (76,0,'','ep0890att.com','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 15:54:55','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (77,0,'','starbucks','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 17:58:07','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (78,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 17:58:15','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (79,0,'Business','BankofAmerica','Hendersonstate1998@yahoo.com','2144355955','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 19:24:43','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (80,0,'','visa','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 20:03:15','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (81,0,'','visa','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 20:04:04','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (82,0,'walgreens','cvs','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-09 22:04:34','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (83,0,'Master','Hebfederalcreditunion','Snlguerra@sbcglobal.net','2104151907','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-11 18:18:59','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (84,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-11 23:17:44','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (85,0,'','','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-11 23:18:05','',0);
+INSERT INTO `cio8v_creditcards_requests` VALUES (86,0,'','WellsFargo','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-12 19:09:21','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (87,0,'CoastalCommunityBank','CapitalOne','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-12 19:26:24','',1);
+INSERT INTO `cio8v_creditcards_requests` VALUES (88,0,'','chasedebitcardamericanexpressprepaidcardbankofamericaprepaidcardandbankofamericacreditcard.','','','',0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-14 03:46:18','',2);
 /*!40000 ALTER TABLE `cio8v_creditcards_requests` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2372,7 +2429,9 @@ CREATE TABLE `cio8v_session` (
 
 LOCK TABLES `cio8v_session` WRITE;
 /*!40000 ALTER TABLE `cio8v_session` DISABLE KEYS */;
-INSERT INTO `cio8v_session` VALUES ('u2fm2euk6rk06igqdr78cmdl71',0,1,'1381942567','__default|a:7:{s:15:\"session.counter\";i:10;s:19:\"session.timer.start\";i:1381942518;s:18:\"session.timer.last\";i:1381942545;s:17:\"session.timer.now\";i:1381942567;s:22:\"session.client.browser\";s:136:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36 FirePHP/4Chrome\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":2:{s:15:\"com_creditcards\";O:8:\"stdClass\":1:{s:5:\"items\";O:8:\"stdClass\":3:{s:6:\"filter\";O:8:\"stdClass\":1:{s:11:\"category_id\";s:1:\"8\";}s:10:\"limitstart\";i:0;s:8:\"ordercol\";s:7:\"a.title\";}}s:6:\"global\";O:8:\"stdClass\":1:{s:4:\"list\";O:8:\"stdClass\":1:{s:5:\"limit\";i:250;}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;s:1:\"9\";}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";N;s:14:\"\\0\\0\\0_authLevels\";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}}',0,'');
+INSERT INTO `cio8v_session` VALUES ('6h07p8neehiraps6d78ct70sq5',0,1,'1384449597','__default|a:8:{s:15:\"session.counter\";i:4;s:19:\"session.timer.start\";i:1384449542;s:18:\"session.timer.last\";i:1384449565;s:17:\"session.timer.now\";i:1384449597;s:22:\"session.client.browser\";s:106:\"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; 909)\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":2:{s:15:\"com_creditcards\";O:8:\"stdClass\":1:{s:5:\"items\";O:8:\"stdClass\":3:{s:6:\"filter\";O:8:\"stdClass\":1:{s:11:\"category_id\";s:1:\"0\";}s:10:\"limitstart\";i:0;s:8:\"ordercol\";s:7:\"a.title\";}}s:6:\"global\";O:8:\"stdClass\":1:{s:4:\"list\";O:8:\"stdClass\":1:{s:5:\"limit\";i:250;}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;s:1:\"9\";}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";N;s:14:\"\\0\\0\\0_authLevels\";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:6:\"vendor\";s:3:\"att\";}',0,'');
+INSERT INTO `cio8v_session` VALUES ('hqb3qd2qvjcie4ip57f9r4vjt6',0,1,'1384448851','__default|a:8:{s:15:\"session.counter\";i:1;s:19:\"session.timer.start\";i:1384448851;s:18:\"session.timer.last\";i:1384448851;s:17:\"session.timer.now\";i:1384448851;s:22:\"session.client.browser\";s:99:\"Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B329\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;s:1:\"9\";}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";N;s:14:\"\\0\\0\\0_authLevels\";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:6:\"vendor\";s:7:\"verizon\";}',0,'');
+INSERT INTO `cio8v_session` VALUES ('jljemrqdjvofp55vomldc0eqb6',0,1,'1384449545','__default|a:8:{s:15:\"session.counter\";i:2;s:19:\"session.timer.start\";i:1384449543;s:18:\"session.timer.last\";i:1384449543;s:17:\"session.timer.now\";i:1384449545;s:22:\"session.client.browser\";s:109:\"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":2:{s:15:\"com_creditcards\";O:8:\"stdClass\":1:{s:5:\"items\";O:8:\"stdClass\":3:{s:6:\"filter\";O:8:\"stdClass\":1:{s:11:\"category_id\";s:2:\"10\";}s:10:\"limitstart\";i:0;s:8:\"ordercol\";s:7:\"a.title\";}}s:6:\"global\";O:8:\"stdClass\":1:{s:4:\"list\";O:8:\"stdClass\":1:{s:5:\"limit\";i:250;}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;s:1:\"9\";}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";N;s:14:\"\\0\\0\\0_authLevels\";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:6:\"vendor\";s:3:\"att\";}',0,'');
 /*!40000 ALTER TABLE `cio8v_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2884,7 +2943,7 @@ CREATE TABLE `cio8v_users` (
 LOCK TABLES `cio8v_users` WRITE;
 /*!40000 ALTER TABLE `cio8v_users` DISABLE KEYS */;
 INSERT INTO `cio8v_users` VALUES (144,'Super User','chris','chris@ammonitenetworks.com','f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh',0,1,'2013-08-06 18:14:12','2013-10-11 20:56:35','0','','0000-00-00 00:00:00',0);
-INSERT INTO `cio8v_users` VALUES (145,'Isis','isis','isis@notreal.com','070d96e792dece4fafd1798f9c589a87:wQMv4NRT46uODtA4Ol1ZMQ5C5n8bqtQq',0,0,'2013-09-05 18:37:19','2013-10-14 13:34:47','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
+INSERT INTO `cio8v_users` VALUES (145,'Isis','isis','isis@notreal.com','070d96e792dece4fafd1798f9c589a87:wQMv4NRT46uODtA4Ol1ZMQ5C5n8bqtQq',0,0,'2013-09-05 18:37:19','2013-10-23 15:06:35','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (146,'User','user','user@notreal.com','adcdc3474a1463d87439edf44129eb9d:hCsajaDdgPv5ZuriMe3hK1R8Bh2JW1Q9',0,0,'2013-09-05 18:39:03','0000-00-00 00:00:00','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (147,'T-Mobile','tmobile','Tmobile@fakeemail.com','669d7b740751f249dc8e9343d831658f:CGrm9Z36a3PO9IjjhF0esGF37qnq9kkI',0,0,'2013-09-27 17:52:16','2013-09-30 20:18:48','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (148,'verizon','verizon','verizon@verizonfake.com','b91b640924d183f54b2f5c25de74cd81:NATwEcOpg8fm9BKzMG52Ussvu9cO8zFi',0,0,'2013-09-27 17:52:40','2013-09-30 20:16:30','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
@@ -2991,4 +3050,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-10-16 16:56:43
+-- Dump completed on 2013-11-14 17:31:02
