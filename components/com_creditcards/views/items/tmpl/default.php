@@ -49,9 +49,30 @@
 						<div style="height:40px;"></div>
 					</div>
 
-					
+
+					<?php if(strpos(JURI::current(), 'wells')) :  ?>
+					<style type="text/css">
+					#wellsCondition {
+height: auto;
+padding: 10px;
+width: 100%;
+/*background: rgba(0,0,0,0.6);*/
+z-index: 100;
+margin-bottom: 40px;
+}
+					</style>
+					<div id="wellsCondition" style="color:white;">
+											All Wells Fargo credit cards are subject to credit qualification. Wells Fargo reserves the right to change terms, rates, and fees at its discretion in accordance with the card agreement and applicable law. 
+
+					</div>	
+				
+					<?php endif; ?>
 
 
-					<div id="bottomOverly">  <a href="<?php echo JURI::current(); ?>/no">Don't see your card? Click here.</a></div>
+					<div id="bottomOverly"> 
+						
+
+
+					 <a href="<?php echo JURI::current(); ?>/no">Don't see your card? Click here.</a></div>
 
 </div>
