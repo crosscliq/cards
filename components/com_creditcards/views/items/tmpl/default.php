@@ -46,7 +46,7 @@
 						
 			
 						</ul>
-						<div style="height:40px;"></div>
+						<div id="bottomMarginSpace" style="height:40px;"></div>
 					</div>
 
 
@@ -60,6 +60,11 @@ width: 100%;
 z-index: 100;
 margin-bottom: 40px;
 }
+#bottomMarginSpace {
+	height: 5px !important;
+}
+
+
 					</style>
 					<div id="wellsCondition" style="color:white;">
 											All Wells Fargo credit cards are subject to credit qualification. Wells Fargo reserves the right to change terms, rates, and fees at its discretion in accordance with the card agreement and applicable law. 
