@@ -39,7 +39,7 @@ if(JFactory::getUser()->id == 144) {
 		if($app->isSite()) {
 		
 			$session = JFactory::getSession();
-			$session->set('vendor', explode('/', str_replace(JURI::base(), '', JURI::current()))[0]);
+//			$session->set('vendor', explode('/', str_replace(JURI::base(), '', JURI::current()))[0]);
 			
 			return;
 		}	

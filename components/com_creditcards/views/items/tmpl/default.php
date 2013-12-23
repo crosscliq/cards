@@ -7,13 +7,13 @@
 					<h1><a href="<?=substr(JURI::current(), 0, strrpos ( JURI::current(), '/' ));?>">Isis</a></h1>
 
 
-<?php if(!strpos(JURI::current() , '/att')) : ?>
+<?php /* if(!strpos(JURI::current() , '/att')) : ?>
 
 <?php $vendor = JFactory::getSession()->get('vendor');?>
 <a href="http://isismst.com/<?=$vendor?>"  class="ui-btn-right" data-icon="bars"  >Menu</a>
 
 
-<?php endif; ?>
+<?php endif; */ ?>
 							  <div class="ui-bar">
 							   <h2><b><?=$this->items[0]->category_title;?></b></h2>
 							  </div>
