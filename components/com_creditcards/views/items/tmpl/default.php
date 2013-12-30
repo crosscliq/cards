@@ -67,7 +67,8 @@ margin-bottom: 40px;
 
 					</style>
 					<div id="wellsCondition" style="color:white;">
-											All Wells Fargo credit cards are subject to credit qualification. Wells Fargo reserves the right to change terms, rates, and fees at its discretion in accordance with the card agreement and applicable law. 
+All Wells Fargo credit cards are subject to credit qualification. Wells Fargo reserves the right to change terms, rates, and fees at its discretion in accordance with the card agreement and applicable law. Wells Fargo and the Wells Fargo red box logo are registered trademarks of Wells Fargo & Co. and are used under limited license.
+
 
 					</div>	
 				

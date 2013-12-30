@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.32, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.31, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: creditcards
 -- ------------------------------------------------------
--- Server version	5.5.32-0ubuntu0.13.04.1
+-- Server version	5.5.31-0ubuntu0.12.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -303,7 +303,7 @@ INSERT INTO `cio8v_categories` VALUES (7,32,1,11,12,1,'uncategorised','com_users
 INSERT INTO `cio8v_categories` VALUES (8,38,1,13,14,1,'amex','com_creditcards','American Express','amex','','',1,144,'2013-09-05 18:21:54',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/amex.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:25:50',144,'2013-08-06 18:32:48',0,'*',1);
 INSERT INTO `cio8v_categories` VALUES (9,39,1,15,16,1,'boa','com_creditcards','Bank of America','boa','','',0,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/bankofamerica.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:25:58',144,'2013-08-06 18:33:11',0,'*',1);
 INSERT INTO `cio8v_categories` VALUES (10,40,1,17,18,1,'chase','com_creditcards','Chase','chase','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/chase.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:26:14',144,'2013-08-06 18:33:34',0,'*',1);
-INSERT INTO `cio8v_categories` VALUES (11,41,1,19,20,1,'wells-fargo','com_creditcards','Wells Fargo','wells-fargo','','',0,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/wellsfargo.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:34:41',0,'0000-00-00 00:00:00',0,'*',1);
+INSERT INTO `cio8v_categories` VALUES (11,41,1,19,20,1,'wells-fargo','com_creditcards','Wells Fargo','wells-fargo','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"images\\/creditcards\\/wellsfargo.png\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-08-06 18:34:41',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `cio8v_categories` VALUES (12,42,1,21,22,1,'tools','com_content','Tools','tools','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',144,'2013-09-27 17:46:54',0,'0000-00-00 00:00:00',128,'*',1);
 /*!40000 ALTER TABLE `cio8v_categories` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -610,7 +610,7 @@ CREATE TABLE `cio8v_creditcards_items` (
   `verizon` tinyint(4) NOT NULL DEFAULT '1',
   `tmobile` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=219 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=230 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -754,12 +754,12 @@ INSERT INTO `cio8v_creditcards_items` VALUES (140,'CHASE SAPPHIRE® CARD','','',
 INSERT INTO `cio8v_creditcards_items` VALUES (141,'J.P. Morgan Palladium Card','','','',75,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,1,'visa',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (142,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,0,'visa',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (143,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',10,0,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (144,'Wells Fargo Rewards® Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (145,'Wells Fargo Cash BackSM Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (146,'Wells Fargo Home Rebate Card®','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (147,'Wells Fargo® Platinum Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (148,'Wells Fargo Cash BackSM College Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
-INSERT INTO `cio8v_creditcards_items` VALUES (149,'Wells Fargo Secured Card','','','',0,1,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (144,'Wells Fargo Rewards® Card','','','',0,-2,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (145,'Wells Fargo Cash BackSM Card','','','',0,-2,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (146,'Wells Fargo Home Rebate Card®','','','',0,-2,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (147,'Wells Fargo® Platinum Card','','','',0,-2,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (148,'Wells Fargo Cash BackSM College Card','','','',0,-2,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (149,'Wells Fargo Secured Card','','','',0,-2,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,1,'visa',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (150,'Amazing Card 1','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,0,'visa',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (151,'Amazing Card 2','','','',0,0,0,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',11,0,'visa',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (152,'American Express® Clear Credit Card','','','',8,-2,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-08 00:03:33',8,1,'amex',1,1,1);
@@ -829,6 +829,17 @@ INSERT INTO `cio8v_creditcards_items` VALUES (215,'Zync® Card from American Exp
 INSERT INTO `cio8v_creditcards_items` VALUES (216,'Clear from American Express® Card','','','',72,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 14:17:48',8,1,'amex',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (217,'Platinum Delta Skymiles® Business Credit Card','','','',73,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-10 14:26:12',8,1,'amex',1,1,1);
 INSERT INTO `cio8v_creditcards_items` VALUES (218,'CHASE SAPPHIRE PREFERRED®  ','','','',78,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-10-23 15:03:40',10,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (219,'By Invitation® Visa Signature®','','','',79,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 17:52:02',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (220,'Wells Fargo Advisors By Invitation®','','','',80,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 17:52:24',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (221,'Wells Fargo Advisors Platinum Cash Back','','','',81,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 17:52:44',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (222,'Wells Fargo Advisors Premium Rewards','','','',82,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 17:53:04',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (223,'Wells Fargo Cash Back℠ Card','','','',83,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 17:53:24',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (224,'Wells Fargo Cash Back℠ College Card','','','',84,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 18:59:14',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (225,'Wells Fargo Home Rebate Card®','','','',85,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 19:01:42',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (226,'Wells Fargo Platinum Card','','','',86,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 19:02:03',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (227,'Wells Fargo Rewards® Card','','','',87,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 19:02:22',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (228,'Wells Fargo Secured Card','','','',88,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 19:02:47',11,1,'visa',1,1,1);
+INSERT INTO `cio8v_creditcards_items` VALUES (229,'Wells Fargo Visa Signature®','','','',89,1,0,'1','0000-00-00 00:00:00','0000-00-00 00:00:00','2013-11-25 19:03:06',11,1,'visa',1,1,1);
 /*!40000 ALTER TABLE `cio8v_creditcards_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2405,8 +2416,7 @@ CREATE TABLE `cio8v_session` (
 
 LOCK TABLES `cio8v_session` WRITE;
 /*!40000 ALTER TABLE `cio8v_session` DISABLE KEYS */;
-INSERT INTO `cio8v_session` VALUES ('3575bkmnbknbrtgrc78kf4bsp1',0,1,'1385142144','__default|a:9:{s:15:\"session.counter\";i:2;s:19:\"session.timer.start\";i:1385142117;s:18:\"session.timer.last\";i:1385142117;s:17:\"session.timer.now\";i:1385142144;s:24:\"session.client.forwarded\";s:11:\"70.211.3.56\";s:22:\"session.client.browser\";s:135:\"Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_4 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B350 Safari/8536.25\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;s:1:\"9\";}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";N;s:14:\"\\0\\0\\0_authLevels\";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:6:\"vendor\";s:7:\"verizon\";}',0,'');
-INSERT INTO `cio8v_session` VALUES ('g88j2udd7h6c8v98pma5lij942',0,1,'1385141878','__default|a:9:{s:15:\"session.counter\";i:5;s:19:\"session.timer.start\";i:1385139740;s:18:\"session.timer.last\";i:1385140358;s:17:\"session.timer.now\";i:1385141878;s:24:\"session.client.forwarded\";s:15:\"162.115.236.104\";s:22:\"session.client.browser\";s:190:\"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":2:{s:15:\"com_creditcards\";O:8:\"stdClass\":1:{s:5:\"items\";O:8:\"stdClass\":3:{s:6:\"filter\";O:8:\"stdClass\":1:{s:11:\"category_id\";s:2:\"10\";}s:10:\"limitstart\";i:0;s:8:\"ordercol\";s:7:\"a.title\";}}s:6:\"global\";O:8:\"stdClass\":1:{s:4:\"list\";O:8:\"stdClass\":1:{s:5:\"limit\";i:250;}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;s:1:\"9\";}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";N;s:14:\"\\0\\0\\0_authLevels\";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:6:\"vendor\";s:7:\"verizon\";}',0,'');
+INSERT INTO `cio8v_session` VALUES ('gscqvl56n3fr0qnsjer0lnki16',0,1,'1388438790','__default|a:7:{s:15:\"session.counter\";i:1;s:19:\"session.timer.start\";i:1388438789;s:18:\"session.timer.last\";i:1388438789;s:17:\"session.timer.now\";i:1388438789;s:22:\"session.client.browser\";s:119:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":2:{s:15:\"com_creditcards\";O:8:\"stdClass\":1:{s:5:\"items\";O:8:\"stdClass\":3:{s:6:\"filter\";O:8:\"stdClass\":1:{s:11:\"category_id\";s:2:\"11\";}s:10:\"limitstart\";i:0;s:8:\"ordercol\";s:7:\"a.title\";}}s:6:\"global\";O:8:\"stdClass\":1:{s:4:\"list\";O:8:\"stdClass\":1:{s:5:\"limit\";i:250;}}}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;s:1:\"9\";}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";N;s:14:\"\\0\\0\\0_authLevels\";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}}',0,'');
 /*!40000 ALTER TABLE `cio8v_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2622,9 +2632,9 @@ CREATE TABLE `cio8v_update_sites` (
 
 LOCK TABLES `cio8v_update_sites` WRITE;
 /*!40000 ALTER TABLE `cio8v_update_sites` DISABLE KEYS */;
-INSERT INTO `cio8v_update_sites` VALUES (1,'Joomla Core','collection','http://update.joomla.org/core/list.xml',1,1381165389);
-INSERT INTO `cio8v_update_sites` VALUES (2,'Joomla Extension Directory','collection','http://update.joomla.org/jed/list.xml',1,1381165389);
-INSERT INTO `cio8v_update_sites` VALUES (3,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist_3.xml',1,1381165389);
+INSERT INTO `cio8v_update_sites` VALUES (1,'Joomla Core','collection','http://update.joomla.org/core/list.xml',1,1385143917);
+INSERT INTO `cio8v_update_sites` VALUES (2,'Joomla Extension Directory','collection','http://update.joomla.org/jed/list.xml',1,1385143917);
+INSERT INTO `cio8v_update_sites` VALUES (3,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist_3.xml',1,1385143917);
 /*!40000 ALTER TABLE `cio8v_update_sites` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2676,7 +2686,7 @@ CREATE TABLE `cio8v_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Available Updates';
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Available Updates';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2685,59 +2695,54 @@ CREATE TABLE `cio8v_updates` (
 
 LOCK TABLES `cio8v_updates` WRITE;
 /*!40000 ALTER TABLE `cio8v_updates` DISABLE KEYS */;
-INSERT INTO `cio8v_updates` VALUES (1,3,0,'Malay','','pkg_ms-MY','package','',0,'3.1.5.2','','http://update.joomla.org/language/details3/ms-MY_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (2,3,0,'Romanian','','pkg_ro-RO','package','',0,'3.1.1.2','','http://update.joomla.org/language/details3/ro-RO_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (3,3,0,'Flemish','','pkg_nl-BE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/nl-BE_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (4,3,0,'Chinese Traditional','','pkg_zh-TW','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/zh-TW_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (5,3,0,'French','','pkg_fr-FR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/fr-FR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (6,3,0,'Galician','','pkg_gl-ES','package','',0,'3.0.2.2','','http://update.joomla.org/language/details3/gl-ES_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (7,3,0,'German','','pkg_de-DE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/de-DE_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (1,1,700,'Joomla','','joomla','file','',0,'3.2.0','','http://update.joomla.org/core/sts/extension_sts.xml','');
+INSERT INTO `cio8v_updates` VALUES (2,3,0,'Malay','','pkg_ms-MY','package','',0,'3.1.5.4','','http://update.joomla.org/language/details3/ms-MY_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (3,3,0,'Romanian','','pkg_ro-RO','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/ro-RO_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (4,3,0,'Flemish','','pkg_nl-BE','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/nl-BE_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (5,3,0,'Chinese Traditional','','pkg_zh-TW','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/zh-TW_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (6,3,0,'French','','pkg_fr-FR','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/fr-FR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (7,3,0,'German','','pkg_de-DE','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/de-DE_details.xml','');
 INSERT INTO `cio8v_updates` VALUES (8,3,0,'Greek','','pkg_el-GR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/el-GR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (9,3,0,'Hebrew','','pkg_he-IL','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/he-IL_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (10,3,0,'Hungarian','','pkg_hu-HU','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/hu-HU_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (11,3,0,'Afrikaans','','pkg_af-ZA','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/af-ZA_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (12,3,0,'Arabic Unitag','','pkg_ar-AA','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ar-AA_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (13,3,0,'Belarusian','','pkg_be-BY','package','',0,'3.0.2.1','','http://update.joomla.org/language/details3/be-BY_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (9,3,0,'Japanese','','pkg_ja-JP','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/ja-JP_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (10,3,0,'Hebrew','','pkg_he-IL','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/he-IL_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (11,3,0,'Hungarian','','pkg_hu-HU','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/hu-HU_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (12,3,0,'Afrikaans','','pkg_af-ZA','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/af-ZA_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (13,3,0,'Arabic Unitag','','pkg_ar-AA','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/ar-AA_details.xml','');
 INSERT INTO `cio8v_updates` VALUES (14,3,0,'Bulgarian','','pkg_bg-BG','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/bg-BG_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (15,3,0,'Catalan','','pkg_ca-ES','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/ca-ES_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (16,3,0,'Chinese Simplified','','pkg_zh-CN','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/zh-CN_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (15,3,0,'Catalan','','pkg_ca-ES','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/ca-ES_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (16,3,0,'Chinese Simplified','','pkg_zh-CN','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/zh-CN_details.xml','');
 INSERT INTO `cio8v_updates` VALUES (17,3,0,'Croatian','','pkg_hr-HR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/hr-HR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (18,3,0,'Czech','','pkg_cs-CZ','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/cs-CZ_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (19,3,0,'Danish','','pkg_da-DK','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/da-DK_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (20,3,0,'Dutch','','pkg_nl-NL','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/nl-NL_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (18,3,0,'Czech','','pkg_cs-CZ','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/cs-CZ_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (19,3,0,'Danish','','pkg_da-DK','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/da-DK_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (20,3,0,'Dutch','','pkg_nl-NL','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/nl-NL_details.xml','');
 INSERT INTO `cio8v_updates` VALUES (21,3,0,'English AU','','pkg_en-AU','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/en-AU_details.xml','');
 INSERT INTO `cio8v_updates` VALUES (22,3,0,'English US','','pkg_en-US','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/en-US_details.xml','');
 INSERT INTO `cio8v_updates` VALUES (23,3,0,'Estonian','','pkg_et-EE','package','',0,'3.1.2.1','','http://update.joomla.org/language/details3/et-EE_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (24,3,0,'Italian','','pkg_it-IT','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/it-IT_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (25,3,0,'Japanese','','pkg_ja-JP','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ja-JP_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (26,3,0,'Korean','','pkg_ko-KR','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ko-KR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (27,3,0,'Kurdish Sorani','','pkg_ckb-IQ','package','',0,'3.0.2.1','','http://update.joomla.org/language/details3/ckb-IQ_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (28,3,0,'Latvian','','pkg_lv-LV','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/lv-LV_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (29,3,0,'Macedonian','','pkg_mk-MK','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/mk-MK_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (30,3,0,'Norwegian Bokmal','','pkg_nb-NO','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/nb-NO_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (31,3,0,'Persian','','pkg_fa-IR','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/fa-IR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (32,3,0,'Polish','','pkg_pl-PL','package','',0,'3.1.4.2','','http://update.joomla.org/language/details3/pl-PL_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (33,3,0,'Portuguese','','pkg_pt-PT','package','',0,'3.0.2.2','','http://update.joomla.org/language/details3/pt-PT_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (34,3,0,'Russian','','pkg_ru-RU','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ru-RU_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (35,3,0,'Scottish Gaelic','','pkg_gd-GB','package','',0,'3.1.0.1','','http://update.joomla.org/language/details3/gd-GB_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (36,3,0,'Slovak','','pkg_sk-SK','package','',0,'3.1.5.2','','http://update.joomla.org/language/details3/sk-SK_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (37,3,0,'Swedish','','pkg_sv-SE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sv-SE_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (38,3,0,'Syriac','','pkg_sy-IQ','package','',0,'3.1.2.1','','http://update.joomla.org/language/details3/sy-IQ_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (39,3,0,'Tamil','','pkg_ta-IN','package','',0,'3.1.5.2','','http://update.joomla.org/language/details3/ta-IN_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (40,3,0,'Thai','','pkg_th-TH','package','',0,'3.1.4.2','','http://update.joomla.org/language/details3/th-TH_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (41,3,0,'Turkish','','pkg_tr-TR','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/tr-TR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (42,3,0,'Ukrainian','','pkg_uk-UA','package','',0,'3.1.4.4','','http://update.joomla.org/language/details3/uk-UA_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (43,3,0,'Uyghur','','pkg_ug-CN','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/ug-CN_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (44,3,0,'Albanian','','pkg_sq-AL','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/sq-AL_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (45,3,0,'Portuguese Brazil','','pkg_pt-BR','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/pt-BR_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (46,3,0,'Serbian Latin','','pkg_sr-YU','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sr-YU_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (47,3,0,'Spanish','','pkg_es-ES','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/es-ES_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (48,3,0,'Bosnian','','pkg_bs-BA','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/bs-BA_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (49,3,0,'Serbian Cyrillic','','pkg_sr-RS','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sr-RS_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (50,3,0,'Vietnamese','','pkg_vi-VN','package','',0,'3.0.3.1','','http://update.joomla.org/language/details3/vi-VN_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (51,3,0,'Bahasa Indonesia','','pkg_id-ID','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/id-ID_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (52,3,0,'Finnish','','pkg_fi-FI','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/fi-FI_details.xml','');
-INSERT INTO `cio8v_updates` VALUES (53,3,0,'Swahili','','pkg_sw-KE','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/sw-KE_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (24,3,0,'Italian','','pkg_it-IT','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/it-IT_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (25,3,0,'Korean','','pkg_ko-KR','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/ko-KR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (26,3,0,'Latvian','','pkg_lv-LV','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/lv-LV_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (27,3,0,'Macedonian','','pkg_mk-MK','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/mk-MK_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (28,3,0,'Norwegian Bokmal','','pkg_nb-NO','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/nb-NO_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (29,3,0,'Persian','','pkg_fa-IR','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/fa-IR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (30,3,0,'Polish','','pkg_pl-PL','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/pl-PL_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (31,3,0,'Russian','','pkg_ru-RU','package','',0,'3.1.5.1','','http://update.joomla.org/language/details3/ru-RU_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (32,3,0,'Slovak','','pkg_sk-SK','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/sk-SK_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (33,3,0,'Swedish','','pkg_sv-SE','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/sv-SE_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (34,3,0,'Syriac','','pkg_sy-IQ','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/sy-IQ_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (35,3,0,'Tamil','','pkg_ta-IN','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/ta-IN_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (36,3,0,'Thai','','pkg_th-TH','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/th-TH_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (37,3,0,'Turkish','','pkg_tr-TR','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/tr-TR_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (38,3,0,'Ukrainian','','pkg_uk-UA','package','',0,'3.2.0.6','','http://update.joomla.org/language/details3/uk-UA_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (39,3,0,'Uyghur','','pkg_ug-CN','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/ug-CN_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (40,3,0,'Albanian','','pkg_sq-AL','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/sq-AL_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (41,3,0,'Serbian Latin','','pkg_sr-YU','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/sr-YU_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (42,3,0,'Spanish','','pkg_es-ES','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/es-ES_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (43,3,0,'Bosnian','','pkg_bs-BA','package','',0,'3.1.1.1','','http://update.joomla.org/language/details3/bs-BA_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (44,3,0,'Serbian Cyrillic','','pkg_sr-RS','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/sr-RS_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (45,3,0,'Bahasa Indonesia','','pkg_id-ID','package','',0,'3.1.4.1','','http://update.joomla.org/language/details3/id-ID_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (46,3,0,'Finnish','','pkg_fi-FI','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/fi-FI_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (47,3,0,'Swahili','','pkg_sw-KE','package','',0,'3.2.0.1','','http://update.joomla.org/language/details3/sw-KE_details.xml','');
+INSERT INTO `cio8v_updates` VALUES (48,3,0,'Montenegrin','','pkg_srp-ME','package','',0,'3.2.0.2','','http://update.joomla.org/language/details3/srp-ME_details.xml','');
 /*!40000 ALTER TABLE `cio8v_updates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2917,8 +2922,8 @@ CREATE TABLE `cio8v_users` (
 
 LOCK TABLES `cio8v_users` WRITE;
 /*!40000 ALTER TABLE `cio8v_users` DISABLE KEYS */;
-INSERT INTO `cio8v_users` VALUES (144,'Super User','chris','chris@ammonitenetworks.com','f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh',0,1,'2013-08-06 18:14:12','2013-11-14 18:15:16','0','','0000-00-00 00:00:00',0);
-INSERT INTO `cio8v_users` VALUES (145,'Isis','isis','isis@notreal.com','070d96e792dece4fafd1798f9c589a87:wQMv4NRT46uODtA4Ol1ZMQ5C5n8bqtQq',0,0,'2013-09-05 18:37:19','2013-11-14 19:38:58','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
+INSERT INTO `cio8v_users` VALUES (144,'Super User','chris','chris@ammonitenetworks.com','f3da61c87201f14e5bae541b76cc6c33:vdOLx4TH97mzI2mfFKXUjFfvUisHwWqh',0,1,'2013-08-06 18:14:12','2013-11-25 17:46:06','0','','0000-00-00 00:00:00',0);
+INSERT INTO `cio8v_users` VALUES (145,'Isis','isis','isis@notreal.com','070d96e792dece4fafd1798f9c589a87:wQMv4NRT46uODtA4Ol1ZMQ5C5n8bqtQq',0,0,'2013-09-05 18:37:19','2013-12-12 21:27:01','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (146,'User','user','user@notreal.com','adcdc3474a1463d87439edf44129eb9d:hCsajaDdgPv5ZuriMe3hK1R8Bh2JW1Q9',0,0,'2013-09-05 18:39:03','0000-00-00 00:00:00','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (147,'T-Mobile','tmobile','Tmobile@fakeemail.com','669d7b740751f249dc8e9343d831658f:CGrm9Z36a3PO9IjjhF0esGF37qnq9kkI',0,0,'2013-09-27 17:52:16','2013-09-30 20:18:48','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `cio8v_users` VALUES (148,'verizon','verizon','verizon@verizonfake.com','b91b640924d183f54b2f5c25de74cd81:NATwEcOpg8fm9BKzMG52Ussvu9cO8zFi',0,0,'2013-09-27 17:52:40','2013-09-30 20:16:30','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
@@ -3025,4 +3030,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-11-22 17:55:50
+-- Dump completed on 2013-12-30 21:27:45
